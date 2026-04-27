@@ -2,7 +2,27 @@
 
 **Build production-ready agent systems using proven architectures and patterns**
 
-<img src="img/Title.jpg" alt="Book Cover" width="300" />
+<img src="img/Title.jpg" alt="Book Cover" width="300" align="right" />
+
+---
+
+## About This Book
+
+The AI landscape is shifting from passive, reactive systems to autonomous, goal-directed intelligent agents—systems that perceive their environment, make decisions, and take actions with minimal human intervention. This book presents **30 essential agent architectures** that every AI engineer must master to build effective, production-ready systems.
+
+Raw LLMs alone are not enough. The key to building transformative AI systems lies in understanding how to architect agents that decompose complex tasks, connect to external tools and data sources, maintain memory across interactions, collaborate with humans and other agents, learn from experience, and make ethical decisions aligned with human values.
+
+Each chapter includes **working code**, **formal architectural patterns**, **real-world case studies**, and guidance on avoiding common implementation pitfalls. Every pattern has been tested against the production realities of latency, cost, reliability, and security that define real-world deployments.
+
+## Who This Book Is For
+
+This book is for **AI engineers**, **software developers**, **ML researchers**, and **technical leads** building intelligent systems. It's ideal for those deploying LLM-powered applications or transitioning from traditional ML to agentic frameworks. Python experience and basic ML knowledge are recommended.
+
+
+<br/>
+
+**Original Repo:**  
+https://github.com/PacktPublishing/30-Agents-Every-AI-Engineer-Must-Build
 
 ---
 
@@ -41,19 +61,6 @@
 | 29  | [The Collective Intelligence Agent](chapter15/ch15_education_and_knowledge_agents.ipynb)      | Ch 15: Education & Knowledge Agents             |
 | 30  | [The Embodied Intelligence Agent](chapter16/ch16_embodied_agents.ipynb)                       | Ch 16: Embodied & Physical World Agents         |
 
----
-
-## About This Book
-
-The AI landscape is shifting from passive, reactive systems to autonomous, goal-directed intelligent agents—systems that perceive their environment, make decisions, and take actions with minimal human intervention. This book presents **30 essential agent architectures** that every AI engineer must master to build effective, production-ready systems.
-
-Raw LLMs alone are not enough. The key to building transformative AI systems lies in understanding how to architect agents that decompose complex tasks, connect to external tools and data sources, maintain memory across interactions, collaborate with humans and other agents, learn from experience, and make ethical decisions aligned with human values.
-
-Each chapter includes **working code**, **formal architectural patterns**, **real-world case studies**, and guidance on avoiding common implementation pitfalls. Every pattern has been tested against the production realities of latency, cost, reliability, and security that define real-world deployments.
-
-## Who This Book Is For
-
-This book is for **AI engineers**, **software developers**, **ML researchers**, and **technical leads** building intelligent systems. It's ideal for those deploying LLM-powered applications or transitioning from traditional ML to agentic frameworks. Python experience and basic ML knowledge are recommended.
 
 ---
 
