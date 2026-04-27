@@ -1,12 +1,8 @@
-# Chapter 1: Foundations of Agent Engineering
-
-**Book:** *AI Agents* by Imran Ahmad (Packt Publishing, 2026)
-
----
+# Chapter 01: Foundations of Agent Engineering
 
 ## Overview
 
-This repository is the executable companion to **Chapter 1** of *AI Agents*. It transforms the chapter's theoretical foundations into runnable Python code, covering the cognitive loop, agent brain patterns, interoperability protocols, interaction paradigms, the Agentic AI Progression Framework, and real-world business case studies.
+This repository is the executable companion to **Chapter 1** of _AI Agents_. It transforms the chapter's theoretical foundations into runnable Python code, covering the cognitive loop, agent brain patterns, interoperability protocols, interaction paradigms, the Agentic AI Progression Framework, and real-world business case studies.
 
 Every code cell runs **without an API key** in Simulation Mode, powered by a `MockLLM` engine that returns chapter-derived responses. When an API key is provided (OpenAI, Anthropic, or Google) or Ollama is running locally, the notebook seamlessly switches to Live Mode. Each provider has its own pre-executed notebook variant.
 
@@ -44,19 +40,19 @@ jupyter notebook ch01_foundations_of_agent_engineering.ipynb
 
 The notebook is organized into cell groups that mirror the chapter's sections:
 
-| Cell Group | Chapter Section | Concept Demonstrated |
-|---|---|---|
-| **0** | Setup | Imports, API key detection, mode selection |
-| **1** | §1.1 — Introducing Agents | Timeline of AI agent evolution (four eras) |
-| **2** | §1.2.1 — The Cognitive Loop | Perceive → Reason → Plan → Act → Learn pipeline |
-| **3** | §1.2.3 — Agent Brain Patterns | ReactiveAgent, DeliberativeAgent, HybridAgent |
-| **4** | §1.3.1 — Model Context Protocol | MCPRegistry: tool registration, discovery, invocation |
-| **5** | §1.3.2 — A2A Protocols | AgentMessage passing in a three-agent pipeline |
-| **6** | §1.5 — Interaction Paradigms | Levels 1–5: Direct LLM → Multi-Agent System |
-| **7** | §1.6 — Progression Framework | Maturity model Levels 0–4 with self-assessment |
-| **8** | §1.7 — Business Impact | Quandri, My AskAI, Enterprise Bot case studies |
-| **9** | Resilience Demo | Full-failure demonstration (failure_rate=1.0) |
-| **10** | Summary | Key takeaways and Chapter 2 preview |
+| Cell Group | Chapter Section                 | Concept Demonstrated                                  |
+| ---------- | ------------------------------- | ----------------------------------------------------- |
+| **0**      | Setup                           | Imports, API key detection, mode selection            |
+| **1**      | §1.1 — Introducing Agents       | Timeline of AI agent evolution (four eras)            |
+| **2**      | §1.2.1 — The Cognitive Loop     | Perceive → Reason → Plan → Act → Learn pipeline       |
+| **3**      | §1.2.3 — Agent Brain Patterns   | ReactiveAgent, DeliberativeAgent, HybridAgent         |
+| **4**      | §1.3.1 — Model Context Protocol | MCPRegistry: tool registration, discovery, invocation |
+| **5**      | §1.3.2 — A2A Protocols          | AgentMessage passing in a three-agent pipeline        |
+| **6**      | §1.5 — Interaction Paradigms    | Levels 1–5: Direct LLM → Multi-Agent System           |
+| **7**      | §1.6 — Progression Framework    | Maturity model Levels 0–4 with self-assessment        |
+| **8**      | §1.7 — Business Impact          | Quandri, My AskAI, Enterprise Bot case studies        |
+| **9**      | Resilience Demo                 | Full-failure demonstration (failure_rate=1.0)         |
+| **10**     | Summary                         | Key takeaways and Chapter 2 preview                   |
 
 ## Repository Structure
 
@@ -97,13 +93,13 @@ API key detection follows a three-tier cascade: `.env` file → environment vari
 
 Every notebook is pre-executed with outputs saved. Pick the variant that matches your setup:
 
-| Notebook | Provider | Description |
-|---|---|---|
-| [ch01_foundations_of_agent_engineering__RUN_NO_KEY_SIMULATION.ipynb](ch01_foundations_of_agent_engineering__RUN_NO_KEY_SIMULATION.ipynb) | Simulation | No API key — MockLLM responses |
-| [ch01_foundations_of_agent_engineering__RUN_OPENAI_GPT4o.ipynb](ch01_foundations_of_agent_engineering__RUN_OPENAI_GPT4o.ipynb) | OpenAI GPT-4o | Live LLM via `OPENAI_API_KEY` |
-| [ch01_foundations_of_agent_engineering__RUN_CLAUDE_Sonnet4.ipynb](ch01_foundations_of_agent_engineering__RUN_CLAUDE_Sonnet4.ipynb) | Claude Sonnet 4 | Live LLM via `ANTHROPIC_API_KEY` |
-| [ch01_foundations_of_agent_engineering__RUN_GEMINI_Flash25.ipynb](ch01_foundations_of_agent_engineering__RUN_GEMINI_Flash25.ipynb) | Gemini Flash 2.5 | Live LLM via `GOOGLE_API_KEY` |
-| [ch01_foundations_of_agent_engineering__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb](ch01_foundations_of_agent_engineering__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb) | Local Ollama | DeepSeek V2 16B — no API key |
+| Notebook                                                                                                                                                         | Provider         | Description                      |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------------- |
+| [ch01_foundations_of_agent_engineering\_\_RUN_NO_KEY_SIMULATION.ipynb](ch01_foundations_of_agent_engineering__RUN_NO_KEY_SIMULATION.ipynb)                       | Simulation       | No API key — MockLLM responses   |
+| [ch01_foundations_of_agent_engineering\_\_RUN_OPENAI_GPT4o.ipynb](ch01_foundations_of_agent_engineering__RUN_OPENAI_GPT4o.ipynb)                                 | OpenAI GPT-4o    | Live LLM via `OPENAI_API_KEY`    |
+| [ch01_foundations_of_agent_engineering\_\_RUN_CLAUDE_Sonnet4.ipynb](ch01_foundations_of_agent_engineering__RUN_CLAUDE_Sonnet4.ipynb)                             | Claude Sonnet 4  | Live LLM via `ANTHROPIC_API_KEY` |
+| [ch01_foundations_of_agent_engineering\_\_RUN_GEMINI_Flash25.ipynb](ch01_foundations_of_agent_engineering__RUN_GEMINI_Flash25.ipynb)                             | Gemini Flash 2.5 | Live LLM via `GOOGLE_API_KEY`    |
+| [ch01_foundations_of_agent_engineering\_\_RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb](ch01_foundations_of_agent_engineering__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb) | Local Ollama     | DeepSeek V2 16B — no API key     |
 
 All variants produce equivalent output. Compare them to see how different providers handle the same agent tasks.
 
@@ -130,11 +126,3 @@ The Resilience Demo cell (Cell Group 9) uses `MockLLM(failure_rate=1.0)` to trig
 ## Troubleshooting
 
 See [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for solutions to common issues including module import errors, ANSI color rendering, and Python version compatibility.
-
-## License
-
-This code is provided as educational companion material for *AI Agents* by Imran Ahmad (Packt Publishing, 2026). See the book for full terms of use.
-
-## Author
-
-**Imran Ahmad** — Author of *AI Agents* (Packt Publishing, 2026)
