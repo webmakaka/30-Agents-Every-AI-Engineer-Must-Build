@@ -2,7 +2,7 @@
 
 **Build production-ready agent systems using proven architectures and patterns**
 
-<img src="img/Title.jpg" alt="Book Cover" width="300" align="right" />
+<img src="img/30-Agents-Every-AI-Engineer-Must-Build.jpg" alt="30 Agents Every AI Engineer Must Build" width="300" align="right" />
 
 ---
 
@@ -18,11 +18,45 @@ Each chapter includes **working code**, **formal architectural patterns**, **rea
 
 This book is for **AI engineers**, **software developers**, **ML researchers**, and **technical leads** building intelligent systems. It's ideal for those deploying LLM-powered applications or transitioning from traditional ML to agentic frameworks. Python experience and basic ML knowledge are recommended.
 
-
 <br/>
 
 **Original Repo:**  
 https://github.com/PacktPublishing/30-Agents-Every-AI-Engineer-Must-Build
+
+
+---
+
+Foundation and Tools (Chapters 1-4)
+
+We begin with the essential groundwork that every agent engineer must understand:
+
+    • Chapter 1: Foundations of Agent Engineering introduces core concepts, terminology, and architectural patterns that underpin all intelligent agent systems.
+    • Chapter 2: The Agent Engineer's Toolkit surveys the frameworks, models, and development tools you'll need to efficiently build agent systems.
+    • Chapter 3: The Art of Agent Prompting explores advanced prompt engineering techniques specifically tailored for agent development.
+    • Chapter 4: Agent Deployment & Responsible Development addresses the practical considerations of scaling, securing, and ensuring ethical behavior in production agent systems.
+
+Core Agent Architectures (Chapters 5-12)
+
+Next, we explore the fundamental agent types that serve as building blocks for more complex systems:
+
+    • Chapter 5: Foundational Cognitive Architectures covers the basic decision-making, planning, and memory systems that form the core of intelligent agents.
+    • Chapter 6: Information Retrieval & Knowledge Agents explores how agents interact with external knowledge sources.
+    • Chapter 7: Tool Manipulation & Orchestration Agents examines systems that coordinate tools, functions, and other agents.
+    • Chapter 8: Data Analysis & Reasoning Agents focuses on agents that process information and draw insights.
+    • Chapter 9: Software Development Agents covers systems that assist in code creation and maintenance.
+    • Chapter 10: Conversational & Content Creation Agents explores agents that generate and manage different forms of content.
+    • Chapter 11: Multi-Modal Perception Agents examines agents that process multiple forms of input data.
+    • Chapter 12: Ethical & Explainable Agents focuses on systems designed with transparency and values alignment.
+
+Domain-Specific Applications (Chapters 13-16)
+
+Finally, we apply these core architectures to transform specific domains:
+
+    • Chapter 13: Healthcare & Scientific Agents explores applications in medical care and scientific research.
+    • Chapter 14: Financial & Legal Domain Agents examines systems for regulated industries.
+    • Chapter 15: Education & Knowledge Agents covers applications in learning and knowledge transfer.
+    • Chapter 16: Embodied & Physical World Agents focuses on systems that bridge digital intelligence with physical environments.
+
 
 ---
 
@@ -60,7 +94,6 @@ https://github.com/PacktPublishing/30-Agents-Every-AI-Engineer-Must-Build
 | 28  | [The Education Intelligence Agent](chapter15/ch15_education_and_knowledge_agents.ipynb)       | Ch 15: Education & Knowledge Agents             |
 | 29  | [The Collective Intelligence Agent](chapter15/ch15_education_and_knowledge_agents.ipynb)      | Ch 15: Education & Knowledge Agents             |
 | 30  | [The Embodied Intelligence Agent](chapter16/ch16_embodied_agents.ipynb)                       | Ch 16: Embodied & Physical World Agents         |
-
 
 ---
 
