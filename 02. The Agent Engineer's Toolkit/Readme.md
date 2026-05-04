@@ -58,17 +58,6 @@ The notebook is organized into cell groups that mirror the chapter's sections:
 | **12**     | §2.9 — Cloud Platforms     | AWS / Azure / Google Cloud comparison                                    |
 | **13**     | Summary                    | Chapter takeaways and next steps                                         |
 
-## Repository Structure
-
-```
-chapter02/
-│
-├── README.md                            # This file
-├── .gitkeep                             # Git placeholder
-├── chapter_02_agent_toolkit.ipynb       # Primary deliverable
-└── mock_llm_layer.py                    # Mock infrastructure module
-```
-
 ## Simulation Mode
 
 When no API key is detected, the notebook activates **Simulation Mode**:
