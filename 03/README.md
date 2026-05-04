@@ -35,7 +35,7 @@ cp .env.template .env
 # Set OPENAI_API_KEY, ANTHROPIC_API_KEY, or GOOGLE_API_KEY — or use Ollama locally
 
 # 5. Launch the notebook
-jupyter notebook chapter_03_agent_prompting.ipynb
+jupyter notebook ch03_agent_prompting.ipynb
 ```
 
 ## Section Map
