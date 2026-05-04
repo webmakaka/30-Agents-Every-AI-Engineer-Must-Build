@@ -4,6 +4,11 @@
 
 <img src="img/30-Agents-Every-AI-Engineer-Must-Build.jpg" alt="30 Agents Every AI Engineer Must Build" width="300" align="right" />
 
+<br/>
+
+**Original Repo:**  
+https://github.com/PacktPublishing/30-Agents-Every-AI-Engineer-Must-Build
+
 ---
 
 ## About This Book
@@ -17,11 +22,6 @@ Each chapter includes **working code**, **formal architectural patterns**, **rea
 ## Who This Book Is For
 
 This book is for **AI engineers**, **software developers**, **ML researchers**, and **technical leads** building intelligent systems. It's ideal for those deploying LLM-powered applications or transitioning from traditional ML to agentic frameworks. Python experience and basic ML knowledge are recommended.
-
-<br/>
-
-**Original Repo:**  
-https://github.com/PacktPublishing/30-Agents-Every-AI-Engineer-Must-Build
 
 ---
 
