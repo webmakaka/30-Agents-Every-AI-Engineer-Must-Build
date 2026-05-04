@@ -1,7 +1,5 @@
 # Chapter 3: The Art of Agent Prompting
 
-**Book:** *30 Agents Every AI Engineer Must Build* by Imran Ahmad (Packt Publishing, 2026)
-
 ---
 
 ## Overview
@@ -118,11 +116,3 @@ For a detailed comparison of how each provider performs on this chapter's tasks 
 ## Troubleshooting
 
 See [troubleshooting.md](troubleshooting.md) for solutions to common dependency conflicts and environment issues.
-
-## License
-
-This code is provided as educational companion material for *30 Agents Every AI Engineer Must Build* by Imran Ahmad (Packt Publishing, 2026). See the book for full terms of use.
-
-## Author
-
-**Imran Ahmad** — Author of *30 Agents Every AI Engineer Must Build* (Packt Publishing, 2026)
