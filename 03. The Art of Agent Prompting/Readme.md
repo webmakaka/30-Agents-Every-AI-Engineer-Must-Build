@@ -4,7 +4,7 @@
 
 ## Overview
 
-This repository is the executable companion to **Chapter 3** of *30 Agents Every AI Engineer Must Build*. It transforms every concept in the chapter — from the PTCF framework to Tree-of-Thought prompting — into runnable, interactive code. Topics include cognitive programming, two-layer prompt architecture, the Persona-Task-Context-Format blueprint, task decomposition, few-shot learning, chain-of-thought reasoning, and multi-agent communication protocols.
+This repository is the executable companion to **Chapter 3** of _30 Agents Every AI Engineer Must Build_. It transforms every concept in the chapter — from the PTCF framework to Tree-of-Thought prompting — into runnable, interactive code. Topics include cognitive programming, two-layer prompt architecture, the Persona-Task-Context-Format blueprint, task decomposition, few-shot learning, chain-of-thought reasoning, and multi-agent communication protocols.
 
 Every code cell runs **without an API key** in Simulation Mode, powered by a `MockLLM` engine that returns chapter-derived responses. When an API key is provided (OpenAI, Anthropic, or Google) or Ollama is running locally, the notebook seamlessly switches to Live Mode. Each provider has its own pre-executed notebook variant.
 
@@ -12,7 +12,7 @@ Every code cell runs **without an API key** in Simulation Mode, powered by a `Mo
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/PacktPublishing/30-Agents-Every-AI-Engineer-Must-Build.git
+git clone https://github.com/webmakaka/30-Agents-Every-AI-Engineer-Must-Build.git
 cd ./30-Agents-Every-AI-Engineer-Must-Build/
 cd chapter03
 
@@ -42,18 +42,18 @@ jupyter notebook ch03_agent_prompting.ipynb
 
 The notebook is organized into cell groups that mirror the chapter's sections:
 
-| Cell Group | Chapter Section | Concept Demonstrated |
-|---|---|---|
-| **0** | Setup | Imports, API key detection, mode selection |
-| **1** | §3.1 — From Instructions to Constitutions | Cognitive programming, persona constraints |
-| **2** | §3.2 — Two-Layer Prompt Architecture | System prompt vs. user prompt |
-| **3** | §3.3 — The PTCF Blueprint | Persona, Task, Context, Format framework |
-| **4** | §3.4 — Designing Thinking Agents | Agent capability spectrum, task decomposition |
-| **5** | §3.5 — Teaching by Example | Few-shot learning, ticket classification |
-| **6** | §3.6 — Making Reasoning Visible | Chain-of-thought and Tree-of-thought prompting |
-| **7** | §3.7 — Architecting Collaboration | Multi-agent communication protocols |
-| **8** | Case Studies | SaaS triage, compliance review, code review |
-| **9** | Evaluation | A/B comparison, regression testing |
+| Cell Group | Chapter Section                           | Concept Demonstrated                           |
+| ---------- | ----------------------------------------- | ---------------------------------------------- |
+| **0**      | Setup                                     | Imports, API key detection, mode selection     |
+| **1**      | §3.1 — From Instructions to Constitutions | Cognitive programming, persona constraints     |
+| **2**      | §3.2 — Two-Layer Prompt Architecture      | System prompt vs. user prompt                  |
+| **3**      | §3.3 — The PTCF Blueprint                 | Persona, Task, Context, Format framework       |
+| **4**      | §3.4 — Designing Thinking Agents          | Agent capability spectrum, task decomposition  |
+| **5**      | §3.5 — Teaching by Example                | Few-shot learning, ticket classification       |
+| **6**      | §3.6 — Making Reasoning Visible           | Chain-of-thought and Tree-of-thought prompting |
+| **7**      | §3.7 — Architecting Collaboration         | Multi-agent communication protocols            |
+| **8**      | Case Studies                              | SaaS triage, compliance review, code review    |
+| **9**      | Evaluation                                | A/B comparison, regression testing             |
 
 ## Repository Structure
 
@@ -93,13 +93,13 @@ All LLM calls are wrapped in the `@graceful_fallback` decorator — if anything 
 
 Every notebook is pre-executed with outputs saved. Pick the variant that matches your setup:
 
-| Notebook | Provider | Description |
-|---|---|---|
-| [ch03_agent_prompting__RUN_NO_KEY_SIMULATION.ipynb](ch03_agent_prompting__RUN_NO_KEY_SIMULATION.ipynb) | Simulation | No API key — MockLLM responses |
-| [ch03_agent_prompting__RUN_OPENAI_GPT4o.ipynb](ch03_agent_prompting__RUN_OPENAI_GPT4o.ipynb) | OpenAI GPT-4o | Live LLM via `OPENAI_API_KEY` |
-| [ch03_agent_prompting__RUN_CLAUDE_Sonnet4.ipynb](ch03_agent_prompting__RUN_CLAUDE_Sonnet4.ipynb) | Claude Sonnet 4 | Live LLM via `ANTHROPIC_API_KEY` |
-| [ch03_agent_prompting__RUN_GEMINI_Flash25.ipynb](ch03_agent_prompting__RUN_GEMINI_Flash25.ipynb) | Gemini Flash 2.5 | Live LLM via `GOOGLE_API_KEY` |
-| [ch03_agent_prompting__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb](ch03_agent_prompting__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb) | Local Ollama | DeepSeek V2 16B — no API key |
+| Notebook                                                                                                                       | Provider         | Description                      |
+| ------------------------------------------------------------------------------------------------------------------------------ | ---------------- | -------------------------------- |
+| [ch03_agent_prompting\_\_RUN_NO_KEY_SIMULATION.ipynb](ch03_agent_prompting__RUN_NO_KEY_SIMULATION.ipynb)                       | Simulation       | No API key — MockLLM responses   |
+| [ch03_agent_prompting\_\_RUN_OPENAI_GPT4o.ipynb](ch03_agent_prompting__RUN_OPENAI_GPT4o.ipynb)                                 | OpenAI GPT-4o    | Live LLM via `OPENAI_API_KEY`    |
+| [ch03_agent_prompting\_\_RUN_CLAUDE_Sonnet4.ipynb](ch03_agent_prompting__RUN_CLAUDE_Sonnet4.ipynb)                             | Claude Sonnet 4  | Live LLM via `ANTHROPIC_API_KEY` |
+| [ch03_agent_prompting\_\_RUN_GEMINI_Flash25.ipynb](ch03_agent_prompting__RUN_GEMINI_Flash25.ipynb)                             | Gemini Flash 2.5 | Live LLM via `GOOGLE_API_KEY`    |
+| [ch03_agent_prompting\_\_RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb](ch03_agent_prompting__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb) | Local Ollama     | DeepSeek V2 16B — no API key     |
 
 All variants produce equivalent output. Compare them to see how different providers handle the same agent tasks.
 

@@ -113,7 +113,7 @@ Finally, we apply these core architectures to transform specific domains:
 
 ```bash
 # Clone the repository
-git clone https://github.com/PacktPublishing/30-Agents-Every-AI-Engineer-Must-Build.git
+git clone https://github.com/webmakaka/30-Agents-Every-AI-Engineer-Must-Build.git
 cd 30-Agents-Every-AI-Engineer-Must-Build
 
 # Navigate to a chapter

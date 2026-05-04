@@ -1,12 +1,12 @@
 # Chapter 11: Multi-Modal Perception Agents
 
-**Book:** *30 Agents Every AI Engineer Must Build* by Imran Ahmad (Packt Publishing, 2026)
+**Book:** _30 Agents Every AI Engineer Must Build_ by Imran Ahmad (Packt Publishing, 2026)
 
 ---
 
 ## Overview
 
-This repository is the executable companion to **Chapter 11** of *30 Agents Every AI Engineer Must Build*. It explores how intelligent agents perceive and act upon information beyond text — including images, audio waveforms, and physical sensor streams. Three distinct agent domains are implemented: Vision-Language Agents (visual encoder paired with LLM for joint reasoning using Chain-of-Thought prompting), Audio Processing Agents (speech transcription with mode-aware normalization and vocal emotion analysis via the VAD model), and Physical World Sensing Agents (heterogeneous sensor fusion, anomaly detection via pattern matching, and proportional control with deadband hysteresis).
+This repository is the executable companion to **Chapter 11** of _30 Agents Every AI Engineer Must Build_. It explores how intelligent agents perceive and act upon information beyond text — including images, audio waveforms, and physical sensor streams. Three distinct agent domains are implemented: Vision-Language Agents (visual encoder paired with LLM for joint reasoning using Chain-of-Thought prompting), Audio Processing Agents (speech transcription with mode-aware normalization and vocal emotion analysis via the VAD model), and Physical World Sensing Agents (heterogeneous sensor fusion, anomaly detection via pattern matching, and proportional control with deadband hysteresis).
 
 Every code cell runs **without an API key** in Simulation Mode, powered by mock backends (`MockVLM`, `MockWhisperBackend`, `MockSensorStream`) that return chapter-derived responses. When a Hugging Face token and CUDA GPU are available, the notebook seamlessly switches to Live Mode.
 
@@ -14,7 +14,7 @@ Every code cell runs **without an API key** in Simulation Mode, powered by mock 
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/PacktPublishing/30-Agents-Every-AI-Engineer-Must-Build.git
+git clone https://github.com/webmakaka/30-Agents-Every-AI-Engineer-Must-Build.git
 cd ./30-Agents-Every-AI-Engineer-Must-Build/
 cd chapter11
 
@@ -44,19 +44,19 @@ jupyter notebook chapter_11_multimodal_agents.ipynb
 
 The notebook is organized into cell groups that mirror the chapter's sections:
 
-| Cell Group | Chapter Section | Concept Demonstrated |
-|---|---|---|
-| **0** | Setup | Imports, environment detection, Simulation Mode activation |
-| **1** | §11.1 — Vision-Language Architecture | Visual encoder (ViT), alignment mechanism, cross-modal attention |
-| **2** | §11.1 — Vision QA Agent | LLaVA 1.5, Chain-of-Thought prompting, structured output parsing |
-| **3** | §11.1 — Integration Patterns | Adapter-based, cross-attention, early fusion; latency management |
-| **4** | §11.2 — Audio Architecture | STFT, spectrograms, Whisper encoder architecture |
-| **5** | §11.2 — Speech Recognition | TranscriptionMode (verbatim/clean/normalized), RMS normalization |
-| **6** | §11.2 — Voice Sentiment | Prosodic features, VAD model, emotion profile matching |
-| **7** | §11.3 — Smart Building Architecture | ZoneConfig/ZoneState separation, digital twin concept |
-| **8** | §11.3 — Event Detection | EventPattern with lambda conditions, severity levels |
-| **9** | §11.3 — Control Management | Proportional control, deadband hysteresis, short-cycling prevention |
-| **10** | §11.3 — Sensor Fusion | Temporal averaging, 5-minute fusion window, process_zone loop |
+| Cell Group | Chapter Section                      | Concept Demonstrated                                                |
+| ---------- | ------------------------------------ | ------------------------------------------------------------------- |
+| **0**      | Setup                                | Imports, environment detection, Simulation Mode activation          |
+| **1**      | §11.1 — Vision-Language Architecture | Visual encoder (ViT), alignment mechanism, cross-modal attention    |
+| **2**      | §11.1 — Vision QA Agent              | LLaVA 1.5, Chain-of-Thought prompting, structured output parsing    |
+| **3**      | §11.1 — Integration Patterns         | Adapter-based, cross-attention, early fusion; latency management    |
+| **4**      | §11.2 — Audio Architecture           | STFT, spectrograms, Whisper encoder architecture                    |
+| **5**      | §11.2 — Speech Recognition           | TranscriptionMode (verbatim/clean/normalized), RMS normalization    |
+| **6**      | §11.2 — Voice Sentiment              | Prosodic features, VAD model, emotion profile matching              |
+| **7**      | §11.3 — Smart Building Architecture  | ZoneConfig/ZoneState separation, digital twin concept               |
+| **8**      | §11.3 — Event Detection              | EventPattern with lambda conditions, severity levels                |
+| **9**      | §11.3 — Control Management           | Proportional control, deadband hysteresis, short-cycling prevention |
+| **10**     | §11.3 — Sensor Fusion                | Temporal averaging, 5-minute fusion window, process_zone loop       |
 
 ## Real-World Use Case: Meridian Facilities
 
@@ -101,13 +101,13 @@ When no Hugging Face token or CUDA GPU is detected, the notebook activates **Sim
 
 Every notebook is pre-executed with outputs saved. Pick the variant that matches your setup:
 
-| Notebook | Provider | Description |
-|---|---|---|
-| [ch11_multimodal_agents__RUN_NO_KEY_SIMULATION.ipynb](ch11_multimodal_agents__RUN_NO_KEY_SIMULATION.ipynb) | Simulation | No API key — MockLLM responses |
-| [ch11_multimodal_agents__RUN_OPENAI_GPT4o.ipynb](ch11_multimodal_agents__RUN_OPENAI_GPT4o.ipynb) | OpenAI GPT-4o | Live LLM via `OPENAI_API_KEY` |
-| [ch11_multimodal_agents__RUN_CLAUDE_Sonnet4.ipynb](ch11_multimodal_agents__RUN_CLAUDE_Sonnet4.ipynb) | Claude Sonnet 4 | Live LLM via `ANTHROPIC_API_KEY` |
-| [ch11_multimodal_agents__RUN_GEMINI_Flash25.ipynb](ch11_multimodal_agents__RUN_GEMINI_Flash25.ipynb) | Gemini Flash 2.5 | Live LLM via `GOOGLE_API_KEY` |
-| [ch11_multimodal_agents__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb](ch11_multimodal_agents__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb) | Local Ollama | DeepSeek V2 16B — no API key |
+| Notebook                                                                                                                           | Provider         | Description                      |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------------- |
+| [ch11_multimodal_agents\_\_RUN_NO_KEY_SIMULATION.ipynb](ch11_multimodal_agents__RUN_NO_KEY_SIMULATION.ipynb)                       | Simulation       | No API key — MockLLM responses   |
+| [ch11_multimodal_agents\_\_RUN_OPENAI_GPT4o.ipynb](ch11_multimodal_agents__RUN_OPENAI_GPT4o.ipynb)                                 | OpenAI GPT-4o    | Live LLM via `OPENAI_API_KEY`    |
+| [ch11_multimodal_agents\_\_RUN_CLAUDE_Sonnet4.ipynb](ch11_multimodal_agents__RUN_CLAUDE_Sonnet4.ipynb)                             | Claude Sonnet 4  | Live LLM via `ANTHROPIC_API_KEY` |
+| [ch11_multimodal_agents\_\_RUN_GEMINI_Flash25.ipynb](ch11_multimodal_agents__RUN_GEMINI_Flash25.ipynb)                             | Gemini Flash 2.5 | Live LLM via `GOOGLE_API_KEY`    |
+| [ch11_multimodal_agents\_\_RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb](ch11_multimodal_agents__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb) | Local Ollama     | DeepSeek V2 16B — no API key     |
 
 All variants produce equivalent output. Compare them to see how different providers handle the same agent tasks.
 
@@ -137,8 +137,8 @@ See [troubleshooting.md](troubleshooting.md) for environment-specific guidance, 
 
 ## License
 
-This code is provided as educational companion material for *30 Agents Every AI Engineer Must Build* by Imran Ahmad (Packt Publishing, 2026). See the book for full terms of use.
+This code is provided as educational companion material for _30 Agents Every AI Engineer Must Build_ by Imran Ahmad (Packt Publishing, 2026). See the book for full terms of use.
 
 ## Author
 
-**Imran Ahmad** — Author of *30 Agents Every AI Engineer Must Build* (Packt Publishing, 2026)
+**Imran Ahmad** — Author of _30 Agents Every AI Engineer Must Build_ (Packt Publishing, 2026)

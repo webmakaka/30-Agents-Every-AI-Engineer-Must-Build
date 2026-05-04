@@ -21,15 +21,16 @@ sudo apt-get install -y \
 
 **Why each matters:**
 
-| Package | Required By |
-|---------|-------------|
+| Package                             | Required By                                     |
+| ----------------------------------- | ----------------------------------------------- |
 | `build-essential`, `python3.11-dev` | Compiling C extensions (numpy, faiss-cpu, shap) |
-| `python3.11-venv` | Creating venvs natively (no conda needed) |
-| `tesseract-ocr`, `libtesseract-dev` | Ch06 — Document Intelligence Agent (OCR) |
-| `poppler-utils` | Ch06 — pdf2image requires `pdftoppm` |
-| `git` | Cloning the repo |
+| `python3.11-venv`                   | Creating venvs natively (no conda needed)       |
+| `tesseract-ocr`, `libtesseract-dev` | Ch06 — Document Intelligence Agent (OCR)        |
+| `poppler-utils`                     | Ch06 — pdf2image requires `pdftoppm`            |
+| `git`                               | Cloning the repo                                |
 
 **Optional (GPU users only):**
+
 ```bash
 # NVIDIA CUDA toolkit for Ch11 multimodal + Ch08/Ch13 transformers
 # Follow: https://developer.nvidia.com/cuda-downloads (select Ubuntu)
@@ -42,7 +43,7 @@ nvidia-smi  # verify driver is working
 
 ```bash
 # Clone & run
-git clone https://github.com/PacktPublishing/30-Agents-Every-AI-Engineer-Must-Build.git
+git clone https://github.com/webmakaka/30-Agents-Every-AI-Engineer-Must-Build.git
 cd 30-Agents-Every-AI-Engineer-Must-Build
 
 # Download the setup script (or copy from the provided file)
@@ -51,6 +52,7 @@ chmod +x setup-agents-envs.sh
 ```
 
 This script will:
+
 1. Verify Python 3.10+
 2. Install system packages
 3. Create 6–7 venvs under `~/.venvs/agents/`
@@ -97,7 +99,8 @@ Chapter → Environment mapping:
 ### Option B: Jupyter kernel selector (recommended for readers)
 
 Since each venv registers as a Jupyter kernel, readers can:
-1. Launch Jupyter from *any* terminal
+
+1. Launch Jupyter from _any_ terminal
 2. Open a notebook
 3. Go to **Kernel → Change Kernel** and select the right environment (e.g., `Python (agents-rag-research)`)
 
@@ -153,17 +156,17 @@ rm -rf ~/.venvs/agents
 
 ## 6. Disk Space Budget
 
-| Environment | Approximate Size |
-|---|---|
-| `agents-foundation` | ~200 MB |
-| `agents-langchain-modern` | ~400 MB |
-| `agents-rag-research` | ~3.0 GB (PyTorch + transformers) |
-| `agents-legacy-conversational` | ~300 MB |
-| `agents-legacy-finance` | ~350 MB |
-| `agents-legacy-embodied` | ~300 MB |
-| `agents-multimodal` (optional) | ~4.0 GB (PyTorch + LLaVA) |
-| **Total (without GPU)** | **~4.5 GB** |
-| **Total (with GPU)** | **~8.5 GB** |
+| Environment                    | Approximate Size                 |
+| ------------------------------ | -------------------------------- |
+| `agents-foundation`            | ~200 MB                          |
+| `agents-langchain-modern`      | ~400 MB                          |
+| `agents-rag-research`          | ~3.0 GB (PyTorch + transformers) |
+| `agents-legacy-conversational` | ~300 MB                          |
+| `agents-legacy-finance`        | ~350 MB                          |
+| `agents-legacy-embodied`       | ~300 MB                          |
+| `agents-multimodal` (optional) | ~4.0 GB (PyTorch + LLaVA)        |
+| **Total (without GPU)**        | **~4.5 GB**                      |
+| **Total (with GPU)**           | **~8.5 GB**                      |
 
 ---
 
@@ -198,22 +201,26 @@ That's **~11 switches across 17 chapters** — but with the `activate-chapter.sh
 ## 8. Architectural Decision Record
 
 **Why `venv` over `conda`?**
+
 - Readers are more likely to have `python3 -m venv` than conda
 - Lighter footprint, faster creation
 - No channel conflict issues
 - The book's own instructions use `pip install -r requirements.txt`
 
 **Why not Docker?**
+
 - Adds complexity for readers who just want to run notebooks
 - GPU passthrough requires nvidia-docker setup
 - Overkill for a book repo with no long-running services
 
 **Why not one venv per chapter?**
+
 - 17 venvs × ~300MB avg = 5+ GB of duplicated packages
 - Reader fatigue from constant switching
 - Most chapters share 80%+ of their dependencies
 
 **Why not one venv for all?**
+
 - `langchain==0.2.16` and `langchain>=0.3.0` cannot coexist
 - Three mutually incompatible `langgraph` pins (0.1.4, 0.2.28, >=0.3.0)
 - Would require impossible constraint resolution

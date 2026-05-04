@@ -1,12 +1,12 @@
 # Chapter 8: Data Analysis and Reasoning Agents
 
-**Book:** *30 Agents Every AI Engineer Must Build* by Imran Ahmad (Packt Publishing, 2026)
+**Book:** _30 Agents Every AI Engineer Must Build_ by Imran Ahmad (Packt Publishing, 2026)
 
 ---
 
 ## Overview
 
-This repository is the executable companion to **Chapter 8** of *30 Agents Every AI Engineer Must Build*. It implements three agent archetypes that transform raw data into defensible, actionable intelligence: the Data Analysis Agent (cognitive loop for statistical reasoning and anomaly detection), the Verification & Validation Agent (fact-checking, NLI-based evidence scoring, and consistency analysis), and the General Problem Solver (five-stage meta-reasoning cycle: decompose → analogy search → hypothesize → test → meta-learn). Two extended case studies — a newsroom fact-checking assistant and a cross-disciplinary hypothesis engine — demonstrate these patterns, unified by a Tri-Agent Pipeline.
+This repository is the executable companion to **Chapter 8** of _30 Agents Every AI Engineer Must Build_. It implements three agent archetypes that transform raw data into defensible, actionable intelligence: the Data Analysis Agent (cognitive loop for statistical reasoning and anomaly detection), the Verification & Validation Agent (fact-checking, NLI-based evidence scoring, and consistency analysis), and the General Problem Solver (five-stage meta-reasoning cycle: decompose → analogy search → hypothesize → test → meta-learn). Two extended case studies — a newsroom fact-checking assistant and a cross-disciplinary hypothesis engine — demonstrate these patterns, unified by a Tri-Agent Pipeline.
 
 Every code cell runs **without an API key** in Simulation Mode, powered by a `MockLLM` engine that returns chapter-derived responses. When an API key is provided (OpenAI, Anthropic, or Google) or Ollama is running locally, the notebook seamlessly switches to Live Mode. Each provider has its own pre-executed notebook variant.
 
@@ -14,7 +14,7 @@ Every code cell runs **without an API key** in Simulation Mode, powered by a `Mo
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/PacktPublishing/30-Agents-Every-AI-Engineer-Must-Build.git
+git clone https://github.com/webmakaka/30-Agents-Every-AI-Engineer-Must-Build.git
 cd ./30-Agents-Every-AI-Engineer-Must-Build/
 cd chapter08
 
@@ -44,15 +44,15 @@ jupyter notebook ch08_data_analysis_reasoning_agents.ipynb
 
 The notebook is organized into cell groups that mirror the chapter's sections:
 
-| Cell Group | Chapter Section | Concept Demonstrated |
-|---|---|---|
-| **0** | Setup | Environment setup, API key resolution, Simulation Mode |
-| **1** | §8.1 — Data Analysis Agent | Visualization recommender, OLS regression, anomaly detection |
-| **2** | §8.2 — Verification & Validation Agent | Theory narrative, BART-MNLI NLI demo |
-| **3** | §8.3 — General Problem Solver | Theory, pseudocode class, five-stage meta-reasoning |
-| **4** | §8.4 — Case Study 1 | Newsroom fact-checking assistant |
-| **5** | §8.5 — Case Study 2 | Cross-disciplinary GPS hypothesis engine |
-| **6** | §8.6 — Tri-Agent Pipeline | Integration demo: trust-then-escalate architecture |
+| Cell Group | Chapter Section                        | Concept Demonstrated                                         |
+| ---------- | -------------------------------------- | ------------------------------------------------------------ |
+| **0**      | Setup                                  | Environment setup, API key resolution, Simulation Mode       |
+| **1**      | §8.1 — Data Analysis Agent             | Visualization recommender, OLS regression, anomaly detection |
+| **2**      | §8.2 — Verification & Validation Agent | Theory narrative, BART-MNLI NLI demo                         |
+| **3**      | §8.3 — General Problem Solver          | Theory, pseudocode class, five-stage meta-reasoning          |
+| **4**      | §8.4 — Case Study 1                    | Newsroom fact-checking assistant                             |
+| **5**      | §8.5 — Case Study 2                    | Cross-disciplinary GPS hypothesis engine                     |
+| **6**      | §8.6 — Tri-Agent Pipeline              | Integration demo: trust-then-escalate architecture           |
 
 ## Repository Structure
 
@@ -95,13 +95,13 @@ API key detection follows a three-tier cascade: `.env` file → environment vari
 
 Every notebook is pre-executed with outputs saved. Pick the variant that matches your setup:
 
-| Notebook | Provider | Description |
-|---|---|---|
-| [ch08_data_analysis_reasoning_agents__RUN_NO_KEY_SIMULATION.ipynb](ch08_data_analysis_reasoning_agents__RUN_NO_KEY_SIMULATION.ipynb) | Simulation | No API key — MockLLM responses |
-| [ch08_data_analysis_reasoning_agents__RUN_OPENAI_GPT4o.ipynb](ch08_data_analysis_reasoning_agents__RUN_OPENAI_GPT4o.ipynb) | OpenAI GPT-4o | Live LLM via `OPENAI_API_KEY` |
-| [ch08_data_analysis_reasoning_agents__RUN_CLAUDE_Sonnet4.ipynb](ch08_data_analysis_reasoning_agents__RUN_CLAUDE_Sonnet4.ipynb) | Claude Sonnet 4 | Live LLM via `ANTHROPIC_API_KEY` |
-| [ch08_data_analysis_reasoning_agents__RUN_GEMINI_Flash25.ipynb](ch08_data_analysis_reasoning_agents__RUN_GEMINI_Flash25.ipynb) | Gemini Flash 2.5 | Live LLM via `GOOGLE_API_KEY` |
-| [ch08_data_analysis_reasoning_agents__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb](ch08_data_analysis_reasoning_agents__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb) | Local Ollama | DeepSeek V2 16B — no API key |
+| Notebook                                                                                                                                                     | Provider         | Description                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- | -------------------------------- |
+| [ch08_data_analysis_reasoning_agents\_\_RUN_NO_KEY_SIMULATION.ipynb](ch08_data_analysis_reasoning_agents__RUN_NO_KEY_SIMULATION.ipynb)                       | Simulation       | No API key — MockLLM responses   |
+| [ch08_data_analysis_reasoning_agents\_\_RUN_OPENAI_GPT4o.ipynb](ch08_data_analysis_reasoning_agents__RUN_OPENAI_GPT4o.ipynb)                                 | OpenAI GPT-4o    | Live LLM via `OPENAI_API_KEY`    |
+| [ch08_data_analysis_reasoning_agents\_\_RUN_CLAUDE_Sonnet4.ipynb](ch08_data_analysis_reasoning_agents__RUN_CLAUDE_Sonnet4.ipynb)                             | Claude Sonnet 4  | Live LLM via `ANTHROPIC_API_KEY` |
+| [ch08_data_analysis_reasoning_agents\_\_RUN_GEMINI_Flash25.ipynb](ch08_data_analysis_reasoning_agents__RUN_GEMINI_Flash25.ipynb)                             | Gemini Flash 2.5 | Live LLM via `GOOGLE_API_KEY`    |
+| [ch08_data_analysis_reasoning_agents\_\_RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb](ch08_data_analysis_reasoning_agents__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb) | Local Ollama     | DeepSeek V2 16B — no API key     |
 
 All variants produce equivalent output. Compare them to see how different providers handle the same agent tasks.
 
@@ -129,8 +129,8 @@ See [troubleshooting.md](troubleshooting.md) for solutions to common issues incl
 
 ## License
 
-This code is provided as educational companion material for *30 Agents Every AI Engineer Must Build* by Imran Ahmad (Packt Publishing, 2026). See the book for full terms of use.
+This code is provided as educational companion material for _30 Agents Every AI Engineer Must Build_ by Imran Ahmad (Packt Publishing, 2026). See the book for full terms of use.
 
 ## Author
 
-**Imran Ahmad** — Author of *30 Agents Every AI Engineer Must Build* (Packt Publishing, 2026)
+**Imran Ahmad** — Author of _30 Agents Every AI Engineer Must Build_ (Packt Publishing, 2026)

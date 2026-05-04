@@ -1,12 +1,12 @@
 # Chapter 14: Financial and Legal Domain Agents
 
-**Book:** *30 Agents Every AI Engineer Must Build* by Imran Ahmad (Packt Publishing, 2026)
+**Book:** _30 Agents Every AI Engineer Must Build_ by Imran Ahmad (Packt Publishing, 2026)
 
 ---
 
 ## Overview
 
-This repository is the executable companion to **Chapter 14** of *30 Agents Every AI Engineer Must Build*. It implements two production-grade agent architectures for regulated domains: the Financial Advisory Agent (supervised multi-agent system with LangGraph StateGraph coordinating Market Data, Financial Analysis, and News specialist agents — featuring composite risk scoring, client tolerance adjustment, and compliance-by-architecture validation) and the Legal Intelligence Agent (RAG-powered legal research with hybrid retrieval, authority-weighted ranking, a three-stage precedent-finding pipeline, contract analysis with parallel compliance validation, and citation verification to detect hallucinated case law).
+This repository is the executable companion to **Chapter 14** of _30 Agents Every AI Engineer Must Build_. It implements two production-grade agent architectures for regulated domains: the Financial Advisory Agent (supervised multi-agent system with LangGraph StateGraph coordinating Market Data, Financial Analysis, and News specialist agents — featuring composite risk scoring, client tolerance adjustment, and compliance-by-architecture validation) and the Legal Intelligence Agent (RAG-powered legal research with hybrid retrieval, authority-weighted ranking, a three-stage precedent-finding pipeline, contract analysis with parallel compliance validation, and citation verification to detect hallucinated case law).
 
 Every code cell runs **without an API key** in Simulation Mode, powered by `MockChatOpenAI`, `MockStructuredChain`, and `MockVectorStore` that return chapter-derived responses. When API keys are provided (OpenAI, Anthropic, or Google) or Ollama is running locally, the notebook seamlessly switches to Live Mode. Each provider has its own pre-executed notebook variant.
 
@@ -14,7 +14,7 @@ Every code cell runs **without an API key** in Simulation Mode, powered by `Mock
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/PacktPublishing/30-Agents-Every-AI-Engineer-Must-Build.git
+git clone https://github.com/webmakaka/30-Agents-Every-AI-Engineer-Must-Build.git
 cd ./30-Agents-Every-AI-Engineer-Must-Build/
 cd chapter14
 
@@ -44,20 +44,20 @@ jupyter notebook chapter14_financial_legal_agents.ipynb
 
 The notebook is organized into cell groups that mirror the chapter's sections:
 
-| Cell Group | Chapter Section | Concept Demonstrated |
-|---|---|---|
-| **0** | Setup | Configuration, per-service API detection, status dashboard |
-| **1–2** | §14.1.1 — Supervisor & Market Data | Supervisor architecture, Market Data Agent (yfinance/Finnhub) |
-| **3–4** | §14.1.1 — Finnhub & News | Finnhub integration, News Agent (Tavily) |
-| **5** | §14.1 — StateGraph Assembly | LangGraph StateGraph assembly and streaming |
-| **6** | §14.1.2 — Risk Assessment | VaR, Volatility, Maximum Drawdown composite scoring |
-| **7** | §14.1.3 — Personalized Planning | Client tolerance adjustment, compliance gate |
-| **8** | §14.1.4 — RetailAdvisor Case Study | End-to-end financial advisory demonstration |
-| **9** | §14.2.1 — Legal Knowledge Base | Hybrid retrieval with authority-weighted ranking |
-| **10** | §14.2.2 — Precedent Finding | Three-stage pipeline: Issue Extraction → Retrieval → Synthesis |
-| **11** | §14.2.3 — Contract Analysis | Five-stage pipeline with parallel compliance validation |
-| **12** | §14.2.4 — LegalBrief Case Study | Citation verification gate (hallucination detection) |
-| **13** | Summary | Extensions and pointers to Chapter 15 |
+| Cell Group | Chapter Section                    | Concept Demonstrated                                           |
+| ---------- | ---------------------------------- | -------------------------------------------------------------- |
+| **0**      | Setup                              | Configuration, per-service API detection, status dashboard     |
+| **1–2**    | §14.1.1 — Supervisor & Market Data | Supervisor architecture, Market Data Agent (yfinance/Finnhub)  |
+| **3–4**    | §14.1.1 — Finnhub & News           | Finnhub integration, News Agent (Tavily)                       |
+| **5**      | §14.1 — StateGraph Assembly        | LangGraph StateGraph assembly and streaming                    |
+| **6**      | §14.1.2 — Risk Assessment          | VaR, Volatility, Maximum Drawdown composite scoring            |
+| **7**      | §14.1.3 — Personalized Planning    | Client tolerance adjustment, compliance gate                   |
+| **8**      | §14.1.4 — RetailAdvisor Case Study | End-to-end financial advisory demonstration                    |
+| **9**      | §14.2.1 — Legal Knowledge Base     | Hybrid retrieval with authority-weighted ranking               |
+| **10**     | §14.2.2 — Precedent Finding        | Three-stage pipeline: Issue Extraction → Retrieval → Synthesis |
+| **11**     | §14.2.3 — Contract Analysis        | Five-stage pipeline with parallel compliance validation        |
+| **12**     | §14.2.4 — LegalBrief Case Study    | Citation verification gate (hallucination detection)           |
+| **13**     | Summary                            | Extensions and pointers to Chapter 15                          |
 
 ## Real-World Use Cases
 
@@ -109,13 +109,13 @@ A user with any LLM provider key (but no Finnhub key) gets real LLM reasoning ov
 
 Every notebook is pre-executed with outputs saved. Pick the variant that matches your setup:
 
-| Notebook | Provider | Description |
-|---|---|---|
-| [ch14_financial_legal_agents__RUN_NO_KEY_SIMULATION.ipynb](ch14_financial_legal_agents__RUN_NO_KEY_SIMULATION.ipynb) | Simulation | No API key — MockLLM responses |
-| [ch14_financial_legal_agents__RUN_OPENAI_GPT4o.ipynb](ch14_financial_legal_agents__RUN_OPENAI_GPT4o.ipynb) | OpenAI GPT-4o | Live LLM via `OPENAI_API_KEY` |
-| [ch14_financial_legal_agents__RUN_CLAUDE_Sonnet4.ipynb](ch14_financial_legal_agents__RUN_CLAUDE_Sonnet4.ipynb) | Claude Sonnet 4 | Live LLM via `ANTHROPIC_API_KEY` |
-| [ch14_financial_legal_agents__RUN_GEMINI_Flash25.ipynb](ch14_financial_legal_agents__RUN_GEMINI_Flash25.ipynb) | Gemini Flash 2.5 | Live LLM via `GOOGLE_API_KEY` |
-| [ch14_financial_legal_agents__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb](ch14_financial_legal_agents__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb) | Local Ollama | DeepSeek V2 16B — no API key |
+| Notebook                                                                                                                                     | Provider         | Description                      |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------------- |
+| [ch14_financial_legal_agents\_\_RUN_NO_KEY_SIMULATION.ipynb](ch14_financial_legal_agents__RUN_NO_KEY_SIMULATION.ipynb)                       | Simulation       | No API key — MockLLM responses   |
+| [ch14_financial_legal_agents\_\_RUN_OPENAI_GPT4o.ipynb](ch14_financial_legal_agents__RUN_OPENAI_GPT4o.ipynb)                                 | OpenAI GPT-4o    | Live LLM via `OPENAI_API_KEY`    |
+| [ch14_financial_legal_agents\_\_RUN_CLAUDE_Sonnet4.ipynb](ch14_financial_legal_agents__RUN_CLAUDE_Sonnet4.ipynb)                             | Claude Sonnet 4  | Live LLM via `ANTHROPIC_API_KEY` |
+| [ch14_financial_legal_agents\_\_RUN_GEMINI_Flash25.ipynb](ch14_financial_legal_agents__RUN_GEMINI_Flash25.ipynb)                             | Gemini Flash 2.5 | Live LLM via `GOOGLE_API_KEY`    |
+| [ch14_financial_legal_agents\_\_RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb](ch14_financial_legal_agents__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb) | Local Ollama     | DeepSeek V2 16B — no API key     |
 
 All variants produce equivalent output. Compare them to see how different providers handle the same agent tasks.
 
@@ -145,8 +145,8 @@ See [troubleshooting.md](troubleshooting.md) for solutions to 10 common issues i
 
 ## License
 
-This code is provided as educational companion material for *30 Agents Every AI Engineer Must Build* by Imran Ahmad (Packt Publishing, 2026). See the book for full terms of use.
+This code is provided as educational companion material for _30 Agents Every AI Engineer Must Build_ by Imran Ahmad (Packt Publishing, 2026). See the book for full terms of use.
 
 ## Author
 
-**Imran Ahmad** — Author of *30 Agents Every AI Engineer Must Build* (Packt Publishing, 2026)
+**Imran Ahmad** — Author of _30 Agents Every AI Engineer Must Build_ (Packt Publishing, 2026)

@@ -1,12 +1,10 @@
 # Chapter 5: Foundational Cognitive Architectures
 
-**Book:** *30 Agents Every AI Engineer Must Build* by Imran Ahmad (Packt Publishing, 2026)
-
 ---
 
 ## Overview
 
-This repository is the executable companion to **Chapter 5** of *30 Agents Every AI Engineer Must Build*. It examines the three foundational cognitive architectures that empower intelligent, autonomous agents: the Autonomous Decision-Making Agent (real-time perception → cognition → action loop), the Planning Agent (hierarchical task decomposition and dynamic execution), and the Memory-Augmented Agent (working, episodic, and semantic memory for continuity).
+This repository is the executable companion to **Chapter 5** of _30 Agents Every AI Engineer Must Build_. It examines the three foundational cognitive architectures that empower intelligent, autonomous agents: the Autonomous Decision-Making Agent (real-time perception → cognition → action loop), the Planning Agent (hierarchical task decomposition and dynamic execution), and the Memory-Augmented Agent (working, episodic, and semantic memory for continuity).
 
 Every code cell runs **without an API key** in Simulation Mode, powered by a `MockLLM` engine and `MockVectorDB` that return chapter-derived responses. When an API key is provided (OpenAI, Anthropic, or Google) or Ollama is running locally, the notebook seamlessly switches to Live Mode. Each provider has its own pre-executed notebook variant.
 
@@ -14,7 +12,7 @@ Every code cell runs **without an API key** in Simulation Mode, powered by a `Mo
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/PacktPublishing/30-Agents-Every-AI-Engineer-Must-Build.git
+git clone https://github.com/webmakaka/30-Agents-Every-AI-Engineer-Must-Build.git
 cd ./30-Agents-Every-AI-Engineer-Must-Build/
 cd chapter05
 
@@ -44,18 +42,18 @@ jupyter notebook ch05_foundational_architectures.ipynb
 
 The notebook is organized into cell groups that mirror the chapter's sections:
 
-| Cell Group | Chapter Section | Concept Demonstrated |
-|---|---|---|
-| **0** | Setup | Imports, API key detection, mode selection |
-| **1** | §5.1 — Autonomous Decision-Making | The Cognitive Loop: Perceive → Reason → Plan → Act → Learn |
-| **2** | §5.1 — Strategy Scoring | Weighted multi-axis decision framework for resolution strategies |
-| **3** | §5.1 — Task DAGs | Dependency-aware task graphs for billing, outages, and generic workflows |
-| **4** | §5.1 — Safety & Escalation | Five-factor escalation scoring with configurable thresholds |
-| **5** | §5.2 — Planning Agent | Hierarchical decomposition of high-level goals into phased subtasks |
-| **6** | §5.3 — Memory-Augmented Agent | Working, episodic, and semantic memory implementations |
-| **7** | §5.3 — Episodic Retrieval | Vector-similarity search over interaction history |
-| **8** | Integration | Combined three-agent architecture in a single scenario |
-| **9** | Summary | Key takeaways and Chapter 6 preview |
+| Cell Group | Chapter Section                   | Concept Demonstrated                                                     |
+| ---------- | --------------------------------- | ------------------------------------------------------------------------ |
+| **0**      | Setup                             | Imports, API key detection, mode selection                               |
+| **1**      | §5.1 — Autonomous Decision-Making | The Cognitive Loop: Perceive → Reason → Plan → Act → Learn               |
+| **2**      | §5.1 — Strategy Scoring           | Weighted multi-axis decision framework for resolution strategies         |
+| **3**      | §5.1 — Task DAGs                  | Dependency-aware task graphs for billing, outages, and generic workflows |
+| **4**      | §5.1 — Safety & Escalation        | Five-factor escalation scoring with configurable thresholds              |
+| **5**      | §5.2 — Planning Agent             | Hierarchical decomposition of high-level goals into phased subtasks      |
+| **6**      | §5.3 — Memory-Augmented Agent     | Working, episodic, and semantic memory implementations                   |
+| **7**      | §5.3 — Episodic Retrieval         | Vector-similarity search over interaction history                        |
+| **8**      | Integration                       | Combined three-agent architecture in a single scenario                   |
+| **9**      | Summary                           | Key takeaways and Chapter 6 preview                                      |
 
 ## Repository Structure
 
@@ -95,13 +93,13 @@ API key detection follows a three-tier cascade: `.env` file → environment vari
 
 Every notebook is pre-executed with outputs saved. Pick the variant that matches your setup:
 
-| Notebook | Provider | Description |
-|---|---|---|
-| [ch05_foundational_architectures__RUN_NO_KEY_SIMULATION.ipynb](ch05_foundational_architectures__RUN_NO_KEY_SIMULATION.ipynb) | Simulation | No API key — MockLLM responses |
-| [ch05_foundational_architectures__RUN_OPENAI_GPT4o.ipynb](ch05_foundational_architectures__RUN_OPENAI_GPT4o.ipynb) | OpenAI GPT-4o | Live LLM via `OPENAI_API_KEY` |
-| [ch05_foundational_architectures__RUN_CLAUDE_Sonnet4.ipynb](ch05_foundational_architectures__RUN_CLAUDE_Sonnet4.ipynb) | Claude Sonnet 4 | Live LLM via `ANTHROPIC_API_KEY` |
-| [ch05_foundational_architectures__RUN_GEMINI_Flash25.ipynb](ch05_foundational_architectures__RUN_GEMINI_Flash25.ipynb) | Gemini Flash 2.5 | Live LLM via `GOOGLE_API_KEY` |
-| [ch05_foundational_architectures__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb](ch05_foundational_architectures__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb) | Local Ollama | DeepSeek V2 16B — no API key |
+| Notebook                                                                                                                                             | Provider         | Description                      |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------------- |
+| [ch05_foundational_architectures\_\_RUN_NO_KEY_SIMULATION.ipynb](ch05_foundational_architectures__RUN_NO_KEY_SIMULATION.ipynb)                       | Simulation       | No API key — MockLLM responses   |
+| [ch05_foundational_architectures\_\_RUN_OPENAI_GPT4o.ipynb](ch05_foundational_architectures__RUN_OPENAI_GPT4o.ipynb)                                 | OpenAI GPT-4o    | Live LLM via `OPENAI_API_KEY`    |
+| [ch05_foundational_architectures\_\_RUN_CLAUDE_Sonnet4.ipynb](ch05_foundational_architectures__RUN_CLAUDE_Sonnet4.ipynb)                             | Claude Sonnet 4  | Live LLM via `ANTHROPIC_API_KEY` |
+| [ch05_foundational_architectures\_\_RUN_GEMINI_Flash25.ipynb](ch05_foundational_architectures__RUN_GEMINI_Flash25.ipynb)                             | Gemini Flash 2.5 | Live LLM via `GOOGLE_API_KEY`    |
+| [ch05_foundational_architectures\_\_RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb](ch05_foundational_architectures__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb) | Local Ollama     | DeepSeek V2 16B — no API key     |
 
 All variants produce equivalent output. Compare them to see how different providers handle the same agent tasks.
 
@@ -126,11 +124,3 @@ All agent operations are wrapped in the `@fail_gracefully` decorator from `resil
 ## Troubleshooting
 
 See [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for solutions to common dependency conflicts, runtime issues, and platform-specific notes.
-
-## License
-
-This code is provided as educational companion material for *30 Agents Every AI Engineer Must Build* by Imran Ahmad (Packt Publishing, 2026). See the book for full terms of use.
-
-## Author
-
-**Imran Ahmad** — Author of *30 Agents Every AI Engineer Must Build* (Packt Publishing, 2026)

@@ -47,7 +47,7 @@ ok "System packages installed"
 # ── 2. Clone repo (if not present) ──────────────────────────────────────────
 if [ ! -d "$REPO_DIR" ]; then
     info "Cloning repository..."
-    git clone https://github.com/PacktPublishing/30-Agents-Every-AI-Engineer-Must-Build.git "$REPO_DIR"
+    git clone https://github.com/webmakaka/30-Agents-Every-AI-Engineer-Must-Build.git "$REPO_DIR"
     ok "Repository cloned to $REPO_DIR"
 else
     ok "Repository already exists at $REPO_DIR"

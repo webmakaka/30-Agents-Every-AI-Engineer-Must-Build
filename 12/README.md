@@ -1,12 +1,12 @@
 # Chapter 12: Ethical and Explainable Agents
 
-**Book:** *30 Agents Every AI Engineer Must Build* by Imran Ahmad (Packt Publishing, 2026)
+**Book:** _30 Agents Every AI Engineer Must Build_ by Imran Ahmad (Packt Publishing, 2026)
 
 ---
 
 ## Overview
 
-This repository is the executable companion to **Chapter 12** of *30 Agents Every AI Engineer Must Build*. It builds two complementary agent architectures: the Ethical Reasoning Agent (value alignment, deontic logic constraints, bias detection and mitigation with a three-layer fairness architecture, and EU AI Act compliance) and the Explainable Agent (structured explanation frameworks using LIME, SHAP, and counterfactual analysis with audience-adapted output and calibrated confidence communication). Case studies include a Fair HR Assistant and a Medical Diagnosis Assistant.
+This repository is the executable companion to **Chapter 12** of _30 Agents Every AI Engineer Must Build_. It builds two complementary agent architectures: the Ethical Reasoning Agent (value alignment, deontic logic constraints, bias detection and mitigation with a three-layer fairness architecture, and EU AI Act compliance) and the Explainable Agent (structured explanation frameworks using LIME, SHAP, and counterfactual analysis with audience-adapted output and calibrated confidence communication). Case studies include a Fair HR Assistant and a Medical Diagnosis Assistant.
 
 Every code cell runs **without an API key** in Simulation Mode, powered by a `MockLLM` engine that returns chapter-derived responses. When an API key is provided (OpenAI, Anthropic, or Google) or Ollama is running locally, the notebooks seamlessly switch to Live Mode. Each provider has its own pre-executed notebook variant.
 
@@ -14,7 +14,7 @@ Every code cell runs **without an API key** in Simulation Mode, powered by a `Mo
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/PacktPublishing/30-Agents-Every-AI-Engineer-Must-Build.git
+git clone https://github.com/webmakaka/30-Agents-Every-AI-Engineer-Must-Build.git
 cd ./30-Agents-Every-AI-Engineer-Must-Build/
 cd chapter12
 
@@ -47,28 +47,28 @@ This chapter uses **two notebooks** that mirror the chapter's two major sections
 
 ### Notebook 1: Ethical Reasoning Agent
 
-| Cell Group | Chapter Section | Concept Demonstrated |
-|---|---|---|
-| **0** | Setup | Imports, API key detection, mode selection |
-| **1** | §12.1 — Deontic Logic | Obligation, permission, prohibition operators with three axioms |
-| **2** | §12.1 — Ethical Consistency | Formal permissibility criterion for agent actions |
-| **3** | §12.2 — IEEE Ethically Aligned Design | Modular validators for human rights, well-being, accountability |
-| **4** | §12.3 — EU AI Act Compliance | Seven-requirement compliance control plane |
-| **5** | §12.4 — Impossibility Theorem | Statistical parity, equal opportunity, predictive parity constraints |
-| **6** | §12.5 — Bias Detection Pipeline | Demographic parity, disparate impact with four-fifths rule |
-| **7** | Case Study | FairHiringAgent HR Assistant with three-layer fairness architecture |
+| Cell Group | Chapter Section                       | Concept Demonstrated                                                 |
+| ---------- | ------------------------------------- | -------------------------------------------------------------------- |
+| **0**      | Setup                                 | Imports, API key detection, mode selection                           |
+| **1**      | §12.1 — Deontic Logic                 | Obligation, permission, prohibition operators with three axioms      |
+| **2**      | §12.1 — Ethical Consistency           | Formal permissibility criterion for agent actions                    |
+| **3**      | §12.2 — IEEE Ethically Aligned Design | Modular validators for human rights, well-being, accountability      |
+| **4**      | §12.3 — EU AI Act Compliance          | Seven-requirement compliance control plane                           |
+| **5**      | §12.4 — Impossibility Theorem         | Statistical parity, equal opportunity, predictive parity constraints |
+| **6**      | §12.5 — Bias Detection Pipeline       | Demographic parity, disparate impact with four-fifths rule           |
+| **7**      | Case Study                            | FairHiringAgent HR Assistant with three-layer fairness architecture  |
 
 ### Notebook 2: Explainable Agent
 
-| Cell Group | Chapter Section | Concept Demonstrated |
-|---|---|---|
-| **0** | Setup | Imports, API key detection, mode selection |
-| **1** | §12.6 — Reasoning Transparency | Structured explanation frameworks |
-| **2** | §12.7 — LIME and SHAP | Local and global model-agnostic explanations |
-| **3** | §12.8 — Counterfactual Analysis | Minimal change explanations for recourse generation |
-| **4** | §12.9 — Confidence Calibration | Epistemic vs. aleatoric uncertainty with temperature scaling |
-| **5** | §12.10 — Audience Adaptation | Clinician vs. patient explanation templates |
-| **6** | Case Study | DiagnosticAssistant medical case study with multi-source evidence |
+| Cell Group | Chapter Section                 | Concept Demonstrated                                              |
+| ---------- | ------------------------------- | ----------------------------------------------------------------- |
+| **0**      | Setup                           | Imports, API key detection, mode selection                        |
+| **1**      | §12.6 — Reasoning Transparency  | Structured explanation frameworks                                 |
+| **2**      | §12.7 — LIME and SHAP           | Local and global model-agnostic explanations                      |
+| **3**      | §12.8 — Counterfactual Analysis | Minimal change explanations for recourse generation               |
+| **4**      | §12.9 — Confidence Calibration  | Epistemic vs. aleatoric uncertainty with temperature scaling      |
+| **5**      | §12.10 — Audience Adaptation    | Clinician vs. patient explanation templates                       |
+| **6**      | Case Study                      | DiagnosticAssistant medical case study with multi-source evidence |
 
 ## Real-World Use Cases
 
@@ -124,13 +124,13 @@ API key detection follows a three-tier cascade: `.env` file → environment vari
 
 Every notebook is pre-executed with outputs saved. Pick the variant that matches your setup:
 
-| Notebook | Provider | Description |
-|---|---|---|
-| [ch12_02_explainable_agent__RUN_NO_KEY_SIMULATION.ipynb](ch12_02_explainable_agent__RUN_NO_KEY_SIMULATION.ipynb) | Simulation | No API key — MockLLM responses |
-| [ch12_01_ethical_reasoning_agent__RUN_OPENAI_GPT4o.ipynb](ch12_01_ethical_reasoning_agent__RUN_OPENAI_GPT4o.ipynb) | OpenAI GPT-4o | Live LLM via `OPENAI_API_KEY` |
-| [ch12_01_ethical_reasoning_agent__RUN_CLAUDE_Sonnet4.ipynb](ch12_01_ethical_reasoning_agent__RUN_CLAUDE_Sonnet4.ipynb) | Claude Sonnet 4 | Live LLM via `ANTHROPIC_API_KEY` |
-| [ch12_01_ethical_reasoning_agent__RUN_GEMINI_Flash25.ipynb](ch12_01_ethical_reasoning_agent__RUN_GEMINI_Flash25.ipynb) | Gemini Flash 2.5 | Live LLM via `GOOGLE_API_KEY` |
-| [ch12_01_ethical_reasoning_agent__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb](ch12_01_ethical_reasoning_agent__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb) | Local Ollama | DeepSeek V2 16B — no API key |
+| Notebook                                                                                                                                             | Provider         | Description                      |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------------- |
+| [ch12_02_explainable_agent\_\_RUN_NO_KEY_SIMULATION.ipynb](ch12_02_explainable_agent__RUN_NO_KEY_SIMULATION.ipynb)                                   | Simulation       | No API key — MockLLM responses   |
+| [ch12_01_ethical_reasoning_agent\_\_RUN_OPENAI_GPT4o.ipynb](ch12_01_ethical_reasoning_agent__RUN_OPENAI_GPT4o.ipynb)                                 | OpenAI GPT-4o    | Live LLM via `OPENAI_API_KEY`    |
+| [ch12_01_ethical_reasoning_agent\_\_RUN_CLAUDE_Sonnet4.ipynb](ch12_01_ethical_reasoning_agent__RUN_CLAUDE_Sonnet4.ipynb)                             | Claude Sonnet 4  | Live LLM via `ANTHROPIC_API_KEY` |
+| [ch12_01_ethical_reasoning_agent\_\_RUN_GEMINI_Flash25.ipynb](ch12_01_ethical_reasoning_agent__RUN_GEMINI_Flash25.ipynb)                             | Gemini Flash 2.5 | Live LLM via `GOOGLE_API_KEY`    |
+| [ch12_01_ethical_reasoning_agent\_\_RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb](ch12_01_ethical_reasoning_agent__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb) | Local Ollama     | DeepSeek V2 16B — no API key     |
 
 All variants produce equivalent output. Compare them to see how different providers handle the same agent tasks.
 
@@ -158,8 +158,8 @@ See [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for solutions to common dependency 
 
 ## License
 
-This code is provided as educational companion material for *30 Agents Every AI Engineer Must Build* by Imran Ahmad (Packt Publishing, 2026). See the book for full terms of use.
+This code is provided as educational companion material for _30 Agents Every AI Engineer Must Build_ by Imran Ahmad (Packt Publishing, 2026). See the book for full terms of use.
 
 ## Author
 
-**Imran Ahmad** — Author of *30 Agents Every AI Engineer Must Build* (Packt Publishing, 2026)
+**Imran Ahmad** — Author of _30 Agents Every AI Engineer Must Build_ (Packt Publishing, 2026)

@@ -1,12 +1,12 @@
 # Chapter 17: Epilogue — The Future of Intelligent Agents
 
-**Book:** *30 Agents Every AI Engineer Must Build* by Imran Ahmad (Packt Publishing, 2026)
+**Book:** _30 Agents Every AI Engineer Must Build_ by Imran Ahmad (Packt Publishing, 2026)
 
 ---
 
 ## Overview
 
-This repository is the executable companion to **Chapter 17 (Epilogue)** of *30 Agents Every AI Engineer Must Build*. It transforms five forward-looking paradigms into interactive simulations: the Self-Architecting Agent (autonomous evolution and adaptation), the Emergent Agent Society (agent societies and emergent behaviors), the Ethical Circuit Breaker (agent governance and self-regulation), the Memory Consolidation system (brain-inspired cognitive architectures), and the Collaboration Spectrum (strategic implementation roadmaps).
+This repository is the executable companion to **Chapter 17 (Epilogue)** of _30 Agents Every AI Engineer Must Build_. It transforms five forward-looking paradigms into interactive simulations: the Self-Architecting Agent (autonomous evolution and adaptation), the Emergent Agent Society (agent societies and emergent behaviors), the Ethical Circuit Breaker (agent governance and self-regulation), the Memory Consolidation system (brain-inspired cognitive architectures), and the Collaboration Spectrum (strategic implementation roadmaps).
 
 Every code cell runs **without an API key** in Simulation Mode, powered by a `MockLLM` and simulation backends with deterministic outputs (random.seed(42)). When an API key is provided (OpenAI, Anthropic, or Google) or Ollama is running locally, the notebook seamlessly switches to Live Mode. Each provider has its own pre-executed notebook variant.
 
@@ -14,7 +14,7 @@ Every code cell runs **without an API key** in Simulation Mode, powered by a `Mo
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/PacktPublishing/30-Agents-Every-AI-Engineer-Must-Build.git
+git clone https://github.com/webmakaka/30-Agents-Every-AI-Engineer-Must-Build.git
 cd ./30-Agents-Every-AI-Engineer-Must-Build/
 cd chapter17
 
@@ -44,14 +44,14 @@ jupyter notebook ch17_future_agents.ipynb
 
 The notebook is organized into cell groups that mirror the chapter's sections:
 
-| Cell Group | Chapter Section | Concept Demonstrated |
-|---|---|---|
-| **0** | Setup | Imports, API key detection, mode selection |
-| **1** | §17.1 — Self-Architecting Agent | Autonomous agent evolution and adaptation |
-| **2** | §17.2 — Emergent Agent Society | Agent societies and emergent behaviors |
-| **3** | §17.3 — Ethical Circuit Breaker | Agent governance and self-regulation |
-| **4** | §17.4 — Memory Consolidation | Brain-inspired cognitive architectures |
-| **5** | §17.5 — Collaboration Spectrum | Strategic implementation roadmaps |
+| Cell Group | Chapter Section                 | Concept Demonstrated                       |
+| ---------- | ------------------------------- | ------------------------------------------ |
+| **0**      | Setup                           | Imports, API key detection, mode selection |
+| **1**      | §17.1 — Self-Architecting Agent | Autonomous agent evolution and adaptation  |
+| **2**      | §17.2 — Emergent Agent Society  | Agent societies and emergent behaviors     |
+| **3**      | §17.3 — Ethical Circuit Breaker | Agent governance and self-regulation       |
+| **4**      | §17.4 — Memory Consolidation    | Brain-inspired cognitive architectures     |
+| **5**      | §17.5 — Collaboration Spectrum  | Strategic implementation roadmaps          |
 
 ## Repository Structure
 
@@ -91,13 +91,13 @@ API key detection follows a three-tier cascade: `.env` file → environment vari
 
 Every notebook is pre-executed with outputs saved. Pick the variant that matches your setup:
 
-| Notebook | Provider | Description |
-|---|---|---|
-| [ch17_future_agents__RUN_NO_KEY_SIMULATION.ipynb](ch17_future_agents__RUN_NO_KEY_SIMULATION.ipynb) | Simulation | No API key — MockLLM responses |
-| [ch17_future_agents__RUN_OPENAI_GPT4o.ipynb](ch17_future_agents__RUN_OPENAI_GPT4o.ipynb) | OpenAI GPT-4o | Live LLM via `OPENAI_API_KEY` |
-| [ch17_future_agents__RUN_CLAUDE_Sonnet4.ipynb](ch17_future_agents__RUN_CLAUDE_Sonnet4.ipynb) | Claude Sonnet 4 | Live LLM via `ANTHROPIC_API_KEY` |
-| [ch17_future_agents__RUN_GEMINI_Flash25.ipynb](ch17_future_agents__RUN_GEMINI_Flash25.ipynb) | Gemini Flash 2.5 | Live LLM via `GOOGLE_API_KEY` |
-| [ch17_future_agents__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb](ch17_future_agents__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb) | Local Ollama | DeepSeek V2 16B — no API key |
+| Notebook                                                                                                                   | Provider         | Description                      |
+| -------------------------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------------- |
+| [ch17_future_agents\_\_RUN_NO_KEY_SIMULATION.ipynb](ch17_future_agents__RUN_NO_KEY_SIMULATION.ipynb)                       | Simulation       | No API key — MockLLM responses   |
+| [ch17_future_agents\_\_RUN_OPENAI_GPT4o.ipynb](ch17_future_agents__RUN_OPENAI_GPT4o.ipynb)                                 | OpenAI GPT-4o    | Live LLM via `OPENAI_API_KEY`    |
+| [ch17_future_agents\_\_RUN_CLAUDE_Sonnet4.ipynb](ch17_future_agents__RUN_CLAUDE_Sonnet4.ipynb)                             | Claude Sonnet 4  | Live LLM via `ANTHROPIC_API_KEY` |
+| [ch17_future_agents\_\_RUN_GEMINI_Flash25.ipynb](ch17_future_agents__RUN_GEMINI_Flash25.ipynb)                             | Gemini Flash 2.5 | Live LLM via `GOOGLE_API_KEY`    |
+| [ch17_future_agents\_\_RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb](ch17_future_agents__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb) | Local Ollama     | DeepSeek V2 16B — no API key     |
 
 All variants produce equivalent output. Compare them to see how different providers handle the same agent tasks.
 
@@ -125,8 +125,8 @@ See [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for dependency conflict resolutions
 
 ## License
 
-This code is provided as educational companion material for *30 Agents Every AI Engineer Must Build* by Imran Ahmad (Packt Publishing, 2026). See the book for full terms of use.
+This code is provided as educational companion material for _30 Agents Every AI Engineer Must Build_ by Imran Ahmad (Packt Publishing, 2026). See the book for full terms of use.
 
 ## Author
 
-**Imran Ahmad** — Author of *30 Agents Every AI Engineer Must Build* (Packt Publishing, 2026)
+**Imran Ahmad** — Author of _30 Agents Every AI Engineer Must Build_ (Packt Publishing, 2026)

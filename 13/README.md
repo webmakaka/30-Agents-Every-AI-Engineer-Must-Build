@@ -1,12 +1,12 @@
 # Chapter 13: Healthcare and Scientific Agents
 
-**Book:** *30 Agents Every AI Engineer Must Build* by Imran Ahmad (Packt Publishing, 2026)
+**Book:** _30 Agents Every AI Engineer Must Build_ by Imran Ahmad (Packt Publishing, 2026)
 
 ---
 
 ## Overview
 
-This repository is the executable companion to **Chapter 13** of *30 Agents Every AI Engineer Must Build*. It explores two agent architectures for high-stakes, information-intensive domains: the Healthcare Intelligence Agent (four-layer architecture with data ingestion, clinical knowledge integration, Bayesian diagnostic reasoning, and audience-adapted explanation generation — including safety escalation, provenance tracking, and immutable audit trails) and the Scientific Discovery Agent (multi-phase pipeline for fault-tolerant literature synthesis, information-theoretic knowledge gap detection, abductive hypothesis generation, and closed-loop experimental feedback).
+This repository is the executable companion to **Chapter 13** of _30 Agents Every AI Engineer Must Build_. It explores two agent architectures for high-stakes, information-intensive domains: the Healthcare Intelligence Agent (four-layer architecture with data ingestion, clinical knowledge integration, Bayesian diagnostic reasoning, and audience-adapted explanation generation — including safety escalation, provenance tracking, and immutable audit trails) and the Scientific Discovery Agent (multi-phase pipeline for fault-tolerant literature synthesis, information-theoretic knowledge gap detection, abductive hypothesis generation, and closed-loop experimental feedback).
 
 Every code cell runs **without an API key** in Simulation Mode, powered by context-aware mock responses derived directly from Chapter 13 content. When an API key is provided (OpenAI, Anthropic, or Google) or Ollama is running locally, the notebook seamlessly switches to Live Mode. Each provider has its own pre-executed notebook variant.
 
@@ -14,7 +14,7 @@ Every code cell runs **without an API key** in Simulation Mode, powered by conte
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/PacktPublishing/30-Agents-Every-AI-Engineer-Must-Build.git
+git clone https://github.com/webmakaka/30-Agents-Every-AI-Engineer-Must-Build.git
 cd ./30-Agents-Every-AI-Engineer-Must-Build/
 cd chapter13
 
@@ -44,13 +44,13 @@ jupyter notebook chapter13_healthcare_scientific_agents.ipynb
 
 The notebook is organized into cell groups that mirror the chapter's sections:
 
-| Cell Group | Chapter Section | Concept Demonstrated |
-|---|---|---|
-| **0** | Setup | Setup and configuration, technical requirements |
-| **1** | Infrastructure | Simulation infrastructure (cross-cutting mock layer) |
-| **2** | §13.1–13.4 — Healthcare Intelligence Agent | Data ingestion, clinical knowledge, Bayesian reasoning, explanation generation |
-| **3** | §13.5–13.8 — Scientific Discovery Agent | Literature synthesis, knowledge gap detection, hypothesis generation, experimental feedback |
-| **4** | §13.9 — Cross-Domain Analysis | Integration patterns and shared architectural lessons |
+| Cell Group | Chapter Section                            | Concept Demonstrated                                                                        |
+| ---------- | ------------------------------------------ | ------------------------------------------------------------------------------------------- |
+| **0**      | Setup                                      | Setup and configuration, technical requirements                                             |
+| **1**      | Infrastructure                             | Simulation infrastructure (cross-cutting mock layer)                                        |
+| **2**      | §13.1–13.4 — Healthcare Intelligence Agent | Data ingestion, clinical knowledge, Bayesian reasoning, explanation generation              |
+| **3**      | §13.5–13.8 — Scientific Discovery Agent    | Literature synthesis, knowledge gap detection, hypothesis generation, experimental feedback |
+| **4**      | §13.9 — Cross-Domain Analysis              | Integration patterns and shared architectural lessons                                       |
 
 ## Real-World Use Cases
 
@@ -97,13 +97,13 @@ API key detection follows a three-tier cascade: `.env` file → environment vari
 
 Every notebook is pre-executed with outputs saved. Pick the variant that matches your setup:
 
-| Notebook | Provider | Description |
-|---|---|---|
-| [ch13_healthcare_scientific_agents__RUN_NO_KEY_SIMULATION.ipynb](ch13_healthcare_scientific_agents__RUN_NO_KEY_SIMULATION.ipynb) | Simulation | No API key — MockLLM responses |
-| [ch13_healthcare_scientific_agents__RUN_OPENAI_GPT4o.ipynb](ch13_healthcare_scientific_agents__RUN_OPENAI_GPT4o.ipynb) | OpenAI GPT-4o | Live LLM via `OPENAI_API_KEY` |
-| [ch13_healthcare_scientific_agents__RUN_CLAUDE_Sonnet4.ipynb](ch13_healthcare_scientific_agents__RUN_CLAUDE_Sonnet4.ipynb) | Claude Sonnet 4 | Live LLM via `ANTHROPIC_API_KEY` |
-| [ch13_healthcare_scientific_agents__RUN_GEMINI_Flash25.ipynb](ch13_healthcare_scientific_agents__RUN_GEMINI_Flash25.ipynb) | Gemini Flash 2.5 | Live LLM via `GOOGLE_API_KEY` |
-| [ch13_healthcare_scientific_agents__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb](ch13_healthcare_scientific_agents__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb) | Local Ollama | DeepSeek V2 16B — no API key |
+| Notebook                                                                                                                                                 | Provider         | Description                      |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------------- |
+| [ch13_healthcare_scientific_agents\_\_RUN_NO_KEY_SIMULATION.ipynb](ch13_healthcare_scientific_agents__RUN_NO_KEY_SIMULATION.ipynb)                       | Simulation       | No API key — MockLLM responses   |
+| [ch13_healthcare_scientific_agents\_\_RUN_OPENAI_GPT4o.ipynb](ch13_healthcare_scientific_agents__RUN_OPENAI_GPT4o.ipynb)                                 | OpenAI GPT-4o    | Live LLM via `OPENAI_API_KEY`    |
+| [ch13_healthcare_scientific_agents\_\_RUN_CLAUDE_Sonnet4.ipynb](ch13_healthcare_scientific_agents__RUN_CLAUDE_Sonnet4.ipynb)                             | Claude Sonnet 4  | Live LLM via `ANTHROPIC_API_KEY` |
+| [ch13_healthcare_scientific_agents\_\_RUN_GEMINI_Flash25.ipynb](ch13_healthcare_scientific_agents__RUN_GEMINI_Flash25.ipynb)                             | Gemini Flash 2.5 | Live LLM via `GOOGLE_API_KEY`    |
+| [ch13_healthcare_scientific_agents\_\_RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb](ch13_healthcare_scientific_agents__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb) | Local Ollama     | DeepSeek V2 16B — no API key     |
 
 All variants produce equivalent output. Compare them to see how different providers handle the same agent tasks.
 
@@ -131,8 +131,8 @@ See [troubleshooting.md](troubleshooting.md) for solutions to known dependency c
 
 ## License
 
-This code is provided as educational companion material for *30 Agents Every AI Engineer Must Build* by Imran Ahmad (Packt Publishing, 2026). See the book for full terms of use.
+This code is provided as educational companion material for _30 Agents Every AI Engineer Must Build_ by Imran Ahmad (Packt Publishing, 2026). See the book for full terms of use.
 
 ## Author
 
-**Imran Ahmad** — Author of *30 Agents Every AI Engineer Must Build* (Packt Publishing, 2026)
+**Imran Ahmad** — Author of _30 Agents Every AI Engineer Must Build_ (Packt Publishing, 2026)

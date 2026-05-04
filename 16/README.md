@@ -1,12 +1,12 @@
 # Chapter 16: Embodied and Physical World Agents
 
-**Book:** *30 Agents Every AI Engineer Must Build* by Imran Ahmad (Packt Publishing, 2026)
+**Book:** _30 Agents Every AI Engineer Must Build_ by Imran Ahmad (Packt Publishing, 2026)
 
 ---
 
 ## Overview
 
-This repository is the executable companion to **Chapter 16** of *30 Agents Every AI Engineer Must Build*. It implements two complementary agent architectures: the Embodied Intelligence Agent (real-time single-domain control with millisecond precision, hard safety guarantees, and an asymmetric control loop separating high-latency LLM reasoning from low-latency deterministic control) and the Domain-Transforming Integration Agent (cross-domain coordination via typed knowledge graphs with weighted breadth-first influence propagation). A drone mission case study in Ottawa's winter conditions synthesizes both architectures into a composed system with a Unified Constraint Envelope.
+This repository is the executable companion to **Chapter 16** of _30 Agents Every AI Engineer Must Build_. It implements two complementary agent architectures: the Embodied Intelligence Agent (real-time single-domain control with millisecond precision, hard safety guarantees, and an asymmetric control loop separating high-latency LLM reasoning from low-latency deterministic control) and the Domain-Transforming Integration Agent (cross-domain coordination via typed knowledge graphs with weighted breadth-first influence propagation). A drone mission case study in Ottawa's winter conditions synthesizes both architectures into a composed system with a Unified Constraint Envelope.
 
 Every code cell runs **without an API key** in Simulation Mode, powered by `MockChatOpenAI` and `MockGraph` that return chapter-derived responses. When an API key is provided (OpenAI, Anthropic, or Google) or Ollama is running locally, the notebook seamlessly switches to Live Mode. Each provider has its own pre-executed notebook variant.
 
@@ -14,7 +14,7 @@ Every code cell runs **without an API key** in Simulation Mode, powered by `Mock
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/PacktPublishing/30-Agents-Every-AI-Engineer-Must-Build.git
+git clone https://github.com/webmakaka/30-Agents-Every-AI-Engineer-Must-Build.git
 cd ./30-Agents-Every-AI-Engineer-Must-Build/
 cd chapter16
 
@@ -44,17 +44,17 @@ jupyter notebook chapter16_embodied_agents.ipynb
 
 The notebook is organized into cell groups that mirror the chapter's sections:
 
-| Cell Group | Chapter Section | Concept Demonstrated |
-|---|---|---|
-| **0** | Setup | Imports, environment detection, Simulation Mode flag |
-| **1** | Listing 16.1 — Common Patterns | Shared interface stubs for embodied agents |
-| **2** | Listing 16.2 — Embodied Agent | 4-responsibility tool decomposition |
-| **3** | Listing 16.3 — Safety-Constrained Loop | Multi-rate perception-action integration with safety constraints |
-| **4** | Listing 16.4 — Knowledge Graph | Cross-domain knowledge graph construction |
-| **5** | Listing 16.5 — Influence Propagation | Weighted breadth-first traversal for impact estimation |
-| **6** | Listing 16.6 — Ottawa Case Study (Drone) | Embodied drone agent + mission execution |
-| **7** | Listing 16.7 — Constraint Assembler | Cross-domain constraint assembler + NOTAM integration |
-| **8** | Failure Scenarios | Wind RED, Battery RED, NOTAM active, API timeout demos |
+| Cell Group | Chapter Section                          | Concept Demonstrated                                             |
+| ---------- | ---------------------------------------- | ---------------------------------------------------------------- |
+| **0**      | Setup                                    | Imports, environment detection, Simulation Mode flag             |
+| **1**      | Listing 16.1 — Common Patterns           | Shared interface stubs for embodied agents                       |
+| **2**      | Listing 16.2 — Embodied Agent            | 4-responsibility tool decomposition                              |
+| **3**      | Listing 16.3 — Safety-Constrained Loop   | Multi-rate perception-action integration with safety constraints |
+| **4**      | Listing 16.4 — Knowledge Graph           | Cross-domain knowledge graph construction                        |
+| **5**      | Listing 16.5 — Influence Propagation     | Weighted breadth-first traversal for impact estimation           |
+| **6**      | Listing 16.6 — Ottawa Case Study (Drone) | Embodied drone agent + mission execution                         |
+| **7**      | Listing 16.7 — Constraint Assembler      | Cross-domain constraint assembler + NOTAM integration            |
+| **8**      | Failure Scenarios                        | Wind RED, Battery RED, NOTAM active, API timeout demos           |
 
 ## Real-World Use Case: ArcticWing Aerial
 
@@ -103,13 +103,13 @@ API key detection follows a three-tier cascade: `.env` file → environment vari
 
 Every notebook is pre-executed with outputs saved. Pick the variant that matches your setup:
 
-| Notebook | Provider | Description |
-|---|---|---|
-| [ch16_embodied_agents__RUN_NO_KEY_SIMULATION.ipynb](ch16_embodied_agents__RUN_NO_KEY_SIMULATION.ipynb) | Simulation | No API key — MockLLM responses |
-| [ch16_embodied_agents__RUN_OPENAI_GPT4o.ipynb](ch16_embodied_agents__RUN_OPENAI_GPT4o.ipynb) | OpenAI GPT-4o | Live LLM via `OPENAI_API_KEY` |
-| [ch16_embodied_agents__RUN_CLAUDE_Sonnet4.ipynb](ch16_embodied_agents__RUN_CLAUDE_Sonnet4.ipynb) | Claude Sonnet 4 | Live LLM via `ANTHROPIC_API_KEY` |
-| [ch16_embodied_agents__RUN_GEMINI_Flash25.ipynb](ch16_embodied_agents__RUN_GEMINI_Flash25.ipynb) | Gemini Flash 2.5 | Live LLM via `GOOGLE_API_KEY` |
-| [ch16_embodied_agents__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb](ch16_embodied_agents__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb) | Local Ollama | DeepSeek V2 16B — no API key |
+| Notebook                                                                                                                       | Provider         | Description                      |
+| ------------------------------------------------------------------------------------------------------------------------------ | ---------------- | -------------------------------- |
+| [ch16_embodied_agents\_\_RUN_NO_KEY_SIMULATION.ipynb](ch16_embodied_agents__RUN_NO_KEY_SIMULATION.ipynb)                       | Simulation       | No API key — MockLLM responses   |
+| [ch16_embodied_agents\_\_RUN_OPENAI_GPT4o.ipynb](ch16_embodied_agents__RUN_OPENAI_GPT4o.ipynb)                                 | OpenAI GPT-4o    | Live LLM via `OPENAI_API_KEY`    |
+| [ch16_embodied_agents\_\_RUN_CLAUDE_Sonnet4.ipynb](ch16_embodied_agents__RUN_CLAUDE_Sonnet4.ipynb)                             | Claude Sonnet 4  | Live LLM via `ANTHROPIC_API_KEY` |
+| [ch16_embodied_agents\_\_RUN_GEMINI_Flash25.ipynb](ch16_embodied_agents__RUN_GEMINI_Flash25.ipynb)                             | Gemini Flash 2.5 | Live LLM via `GOOGLE_API_KEY`    |
+| [ch16_embodied_agents\_\_RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb](ch16_embodied_agents__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb) | Local Ollama     | DeepSeek V2 16B — no API key     |
 
 All variants produce equivalent output. Compare them to see how different providers handle the same agent tasks.
 
@@ -139,8 +139,8 @@ See [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for solutions to 7 common dependenc
 
 ## License
 
-This code is provided as educational companion material for *30 Agents Every AI Engineer Must Build* by Imran Ahmad (Packt Publishing, 2026). See the book for full terms of use.
+This code is provided as educational companion material for _30 Agents Every AI Engineer Must Build_ by Imran Ahmad (Packt Publishing, 2026). See the book for full terms of use.
 
 ## Author
 
-**Imran Ahmad** — Author of *30 Agents Every AI Engineer Must Build* (Packt Publishing, 2026)
+**Imran Ahmad** — Author of _30 Agents Every AI Engineer Must Build_ (Packt Publishing, 2026)

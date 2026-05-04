@@ -1,12 +1,12 @@
 # Chapter 10: Conversational and Content Creation Agents
 
-**Book:** *30 Agents Every AI Engineer Must Build* by Imran Ahmad (Packt Publishing, 2026)
+**Book:** _30 Agents Every AI Engineer Must Build_ by Imran Ahmad (Packt Publishing, 2026)
 
 ---
 
 ## Overview
 
-This repository is the executable companion to **Chapter 10** of *30 Agents Every AI Engineer Must Build*. It examines two agent architectures that operate at the boundary between algorithmic capability and human experience: the Empathetic Mental Health Support Agent (dual-memory hierarchy with SafetyLayer sentinel and PersonaEngine constraint layer) and the Marketing Content Assistant (multi-agent SMPA pipeline with specialist agents, CSP-based brand enforcement via EditorAgent, and adaptive feedback via AnalyticsEngine).
+This repository is the executable companion to **Chapter 10** of _30 Agents Every AI Engineer Must Build_. It examines two agent architectures that operate at the boundary between algorithmic capability and human experience: the Empathetic Mental Health Support Agent (dual-memory hierarchy with SafetyLayer sentinel and PersonaEngine constraint layer) and the Marketing Content Assistant (multi-agent SMPA pipeline with specialist agents, CSP-based brand enforcement via EditorAgent, and adaptive feedback via AnalyticsEngine).
 
 Every code cell runs **without an API key** in Simulation Mode, powered by a `MockLLM` and `MockEmbeddings` replace the LLM client transparently (works identically across all providers). When an API key is provided (OpenAI, Anthropic, or Google) or Ollama is running locally, the notebook seamlessly switches to Live Mode. Each provider has its own pre-executed notebook variant.
 
@@ -14,7 +14,7 @@ Every code cell runs **without an API key** in Simulation Mode, powered by a `Mo
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/PacktPublishing/30-Agents-Every-AI-Engineer-Must-Build.git
+git clone https://github.com/webmakaka/30-Agents-Every-AI-Engineer-Must-Build.git
 cd ./30-Agents-Every-AI-Engineer-Must-Build/
 cd chapter10
 
@@ -44,21 +44,21 @@ jupyter notebook Chapter_10_Conversational_and_Content_Creation_Agents.ipynb
 
 The notebook is organized into cell groups that mirror the chapter's sections:
 
-| Cell Group | Chapter Section | Concept Demonstrated |
-|---|---|---|
-| **1** | Setup & Configuration | Imports, ColorLogger, API detection, LLM factory |
-| **2.1** | §10.1 — Safety Layer | Crisis sentinel with deterministic bypass |
-| **2.2** | §10.1 — Working Memory | `ContextManager` with `ConversationSummaryBufferMemory` |
-| **2.3** | §10.1 — Semantic Memory | FAISS vector store for long-term recall |
-| **2.4** | §10.1 — Persona Engine | `SystemMessage` persona as controlled bias |
-| **2.5–2.6** | §10.1 — Case Study | Multi-turn dialogue with memory recall and crisis demo |
-| **3.1** | §10.2 — SMPA Foundation | `Agent(ABC)` base class — Sense/Model/Plan/Act |
-| **3.2–3.3** | §10.2 — Brand Constraints | CSP validation with `BrandGuidelines` dataclass |
-| **3.4** | §10.2 — Editor Agent | Quality control layer with consistency scoring |
-| **3.5** | §10.2 — Multimodal Orchestration | `AssetRequest` + `dispatch_asset_request()` |
-| **3.6** | §10.2 — Adaptive Optimization | `AnalyticsEngine` with CTR-based feedback |
-| **3.7–3.9** | §10.2 — Campaign Demo | End-to-end campaign walkthrough with DataVault Pro brief |
-| **4** | Summary | Key takeaways and pointer to Chapter 11 |
+| Cell Group  | Chapter Section                  | Concept Demonstrated                                     |
+| ----------- | -------------------------------- | -------------------------------------------------------- |
+| **1**       | Setup & Configuration            | Imports, ColorLogger, API detection, LLM factory         |
+| **2.1**     | §10.1 — Safety Layer             | Crisis sentinel with deterministic bypass                |
+| **2.2**     | §10.1 — Working Memory           | `ContextManager` with `ConversationSummaryBufferMemory`  |
+| **2.3**     | §10.1 — Semantic Memory          | FAISS vector store for long-term recall                  |
+| **2.4**     | §10.1 — Persona Engine           | `SystemMessage` persona as controlled bias               |
+| **2.5–2.6** | §10.1 — Case Study               | Multi-turn dialogue with memory recall and crisis demo   |
+| **3.1**     | §10.2 — SMPA Foundation          | `Agent(ABC)` base class — Sense/Model/Plan/Act           |
+| **3.2–3.3** | §10.2 — Brand Constraints        | CSP validation with `BrandGuidelines` dataclass          |
+| **3.4**     | §10.2 — Editor Agent             | Quality control layer with consistency scoring           |
+| **3.5**     | §10.2 — Multimodal Orchestration | `AssetRequest` + `dispatch_asset_request()`              |
+| **3.6**     | §10.2 — Adaptive Optimization    | `AnalyticsEngine` with CTR-based feedback                |
+| **3.7–3.9** | §10.2 — Campaign Demo            | End-to-end campaign walkthrough with DataVault Pro brief |
+| **4**       | Summary                          | Key takeaways and pointer to Chapter 11                  |
 
 ## Real-World Use Case: MindBridge Health
 
@@ -104,13 +104,13 @@ API key detection follows a three-tier cascade: `.env` file → environment vari
 
 Every notebook is pre-executed with outputs saved. Pick the variant that matches your setup:
 
-| Notebook | Provider | Description |
-|---|---|---|
-| [ch10_conversational_and_content_creation_agents__RUN_NO_KEY_SIMULATION.ipynb](ch10_conversational_and_content_creation_agents__RUN_NO_KEY_SIMULATION.ipynb) | Simulation | No API key — MockLLM responses |
-| [ch10_conversational_and_content_creation_agents__RUN_OPENAI_GPT4o.ipynb](ch10_conversational_and_content_creation_agents__RUN_OPENAI_GPT4o.ipynb) | OpenAI GPT-4o | Live LLM via `OPENAI_API_KEY` |
-| [ch10_conversational_and_content_creation_agents__RUN_CLAUDE_Sonnet4.ipynb](ch10_conversational_and_content_creation_agents__RUN_CLAUDE_Sonnet4.ipynb) | Claude Sonnet 4 | Live LLM via `ANTHROPIC_API_KEY` |
-| [ch10_conversational_and_content_creation_agents__RUN_GEMINI_Flash25.ipynb](ch10_conversational_and_content_creation_agents__RUN_GEMINI_Flash25.ipynb) | Gemini Flash 2.5 | Live LLM via `GOOGLE_API_KEY` |
-| [ch10_conversational_and_content_creation_agents__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb](ch10_conversational_and_content_creation_agents__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb) | Local Ollama | DeepSeek V2 16B — no API key |
+| Notebook                                                                                                                                                                             | Provider         | Description                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- | -------------------------------- |
+| [ch10_conversational_and_content_creation_agents\_\_RUN_NO_KEY_SIMULATION.ipynb](ch10_conversational_and_content_creation_agents__RUN_NO_KEY_SIMULATION.ipynb)                       | Simulation       | No API key — MockLLM responses   |
+| [ch10_conversational_and_content_creation_agents\_\_RUN_OPENAI_GPT4o.ipynb](ch10_conversational_and_content_creation_agents__RUN_OPENAI_GPT4o.ipynb)                                 | OpenAI GPT-4o    | Live LLM via `OPENAI_API_KEY`    |
+| [ch10_conversational_and_content_creation_agents\_\_RUN_CLAUDE_Sonnet4.ipynb](ch10_conversational_and_content_creation_agents__RUN_CLAUDE_Sonnet4.ipynb)                             | Claude Sonnet 4  | Live LLM via `ANTHROPIC_API_KEY` |
+| [ch10_conversational_and_content_creation_agents\_\_RUN_GEMINI_Flash25.ipynb](ch10_conversational_and_content_creation_agents__RUN_GEMINI_Flash25.ipynb)                             | Gemini Flash 2.5 | Live LLM via `GOOGLE_API_KEY`    |
+| [ch10_conversational_and_content_creation_agents\_\_RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb](ch10_conversational_and_content_creation_agents__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B.ipynb) | Local Ollama     | DeepSeek V2 16B — no API key     |
 
 All variants produce equivalent output. Compare them to see how different providers handle the same agent tasks.
 
@@ -140,8 +140,8 @@ See [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for solutions to common dependency 
 
 ## License
 
-This code is provided as educational companion material for *30 Agents Every AI Engineer Must Build* by Imran Ahmad (Packt Publishing, 2026). See the book for full terms of use.
+This code is provided as educational companion material for _30 Agents Every AI Engineer Must Build_ by Imran Ahmad (Packt Publishing, 2026). See the book for full terms of use.
 
 ## Author
 
-**Imran Ahmad** — Author of *30 Agents Every AI Engineer Must Build* (Packt Publishing, 2026)
+**Imran Ahmad** — Author of _30 Agents Every AI Engineer Must Build_ (Packt Publishing, 2026)
