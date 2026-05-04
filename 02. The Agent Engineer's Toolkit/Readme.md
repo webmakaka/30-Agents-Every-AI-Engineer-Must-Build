@@ -1,7 +1,5 @@
 # Chapter 2: The Agent Engineer's Toolkit
 
-**Book:** _30 Agents Every AI Engineer Must Build_ by Imran Ahmad (Packt Publishing, 2026)
-
 ---
 
 ## Overview
