@@ -17,16 +17,15 @@ cd chapter01
 # 2. Create a virtual environment (recommended)
 python -m venv .venv
 source .venv/bin/activate   # Linux/Mac
-# .venv\Scripts\activate    # Windows
 
 # 3. Install dependencies
 pip install -r requirements.txt
 
 # Then add your provider's dependencies:
+pip install -r requirements-ollama.txt    # For local Ollama (DeepSeek V2)
 pip install -r requirements-openai.txt    # For OpenAI GPT-4o
 pip install -r requirements-claude.txt    # For Anthropic Claude Sonnet 4
 pip install -r requirements-gemini.txt    # For Google Gemini Flash 2.5
-pip install -r requirements-ollama.txt    # For local Ollama (DeepSeek V2)
 
 # 4. (Optional) Configure your LLM provider for Live Mode
 cp .env.template .env
@@ -53,30 +52,6 @@ The notebook is organized into cell groups that mirror the chapter's sections:
 | **8**      | §1.7 — Business Impact          | Quandri, My AskAI, Enterprise Bot case studies        |
 | **9**      | Resilience Demo                 | Full-failure demonstration (failure_rate=1.0)         |
 | **10**     | Summary                         | Key takeaways and Chapter 2 preview                   |
-
-## Repository Structure
-
-```
-ch01-foundations-of-agent-engineering/
-│
-├── README.md                          # This file
-├── AGENTS.md                          # Agentic AI Foundation 2026 metadata
-├── requirements.txt                       # Base/shared dependencies
-├── requirements-openai.txt                # + OpenAI provider deps
-├── requirements-claude.txt                # + Anthropic Claude provider deps
-├── requirements-gemini.txt                # + Google Gemini provider deps
-├── requirements-ollama.txt                # + Local Ollama provider deps
-├── .env.template                      # API key template (zero-hardcode policy)
-├── .gitignore                         # Standard Python + .env exclusions
-├── TROUBLESHOOTING.md                 # Dependency conflict resolution guide
-│
-├── ch01_foundations_of_agent_engineering.ipynb   # Primary deliverable
-│
-└── src/
-    ├── __init__.py                    # Package init with version + author
-    ├── mock_llm.py                    # MockLLM class + 22-entry response bank
-    └── utils.py                       # Color logger, @graceful_fallback, detect_api_key
-```
 
 ## Simulation Mode
 
