@@ -32,7 +32,7 @@ We begin with the essential groundwork that every agent engineer must understand
     • Chapter 1: Foundations of Agent Engineering introduces core concepts, terminology, and architectural patterns that underpin all intelligent agent systems.
     • Chapter 2: The Agent Engineer's Toolkit surveys the frameworks, models, and development tools you'll need to efficiently build agent systems.
     • Chapter 3: The Art of Agent Prompting explores advanced prompt engineering techniques specifically tailored for agent development.
-    • Chapter 4: Agent Deployment & Responsible Development addresses the practical considerations of scaling, securing, and ensuring ethical behavior in production agent systems.
+    • Chapter 4: Agent Deployment and Responsible Development addresses the practical considerations of scaling, securing, and ensuring ethical behavior in production agent systems.
 
 Core Agent Architectures (Chapters 5-12)
 
