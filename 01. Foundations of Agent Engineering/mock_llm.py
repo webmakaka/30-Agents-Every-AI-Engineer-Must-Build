@@ -81,8 +81,6 @@ class MockLLM:
 
         Raises:
             ConnectionError: If failure_rate check triggers (simulated API failure).
-
-        
         """
         # Simulate network latency
         if self.simulate_latency:
@@ -106,8 +104,6 @@ class MockLLM:
         """Extract the last user message content from the messages list.
 
         Iterates in reverse to find the most recent 'user' role message.
-
-        
         """
         for msg in reversed(messages):
             if isinstance(msg, dict) and msg.get("role") == "user":
@@ -126,8 +122,6 @@ class MockLLM:
 
         Returns:
             tuple: (response_text, section_ref) from the best-matching entry.
-
-        
         """
         best_score = 0
         best_response = None

@@ -16,8 +16,6 @@ Components:
     - MockLLM: Deterministic, chapter-derived response engine
     - MockToolkit: Mock implementations of all chapter tool demos
     - MockMemory: Simulated conversation memory (buffer and summary)
-
-
 """
 
 import os
