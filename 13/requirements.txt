@@ -1,6 +1,6 @@
 # Chapter 13: Healthcare and Scientific Agents
 # Book: 30 Agents Every AI Engineer Must Build
-# Author: Imran Ahmad
+
 #
 # Install: pip install -r requirements.txt
 # Requires: Python 3.10+

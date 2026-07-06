@@ -1,7 +1,7 @@
 # src/self_improving.py
 # Chapter 9: Software Development Agents
 # Book: "Agents" by Imran Ahmad (Packt, 2026)
-# Author: Imran Ahmad
+
 #
 # Self-Improving Agent components implementing the closed-loop
 # execute → observe → learn → adapt control system.

@@ -1,6 +1,6 @@
 # Chapter 05 — Foundational Cognitive Architectures
 # Book: 30 Agents Every AI Engineer Must Build
-# Author: Imran Ahmad
+
 #
 # Core dependencies (mock mode — no API key needed)
 python-dotenv>=1.1.0

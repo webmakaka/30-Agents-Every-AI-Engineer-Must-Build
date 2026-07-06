@@ -1,7 +1,7 @@
 # mock_llm.py
 # Chapter 14: Financial and Legal Domain Agents
 # Book: 30 Agents Every AI Engineer Must Build — Imran Ahmad (Packt Publishing)
-# Author: Imran Ahmad
+
 #
 # Provides the resilience layer, color-coded logging, service configuration,
 # and mock implementations that enable Simulation Mode without API keys.

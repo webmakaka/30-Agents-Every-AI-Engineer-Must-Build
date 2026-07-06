@@ -1,7 +1,7 @@
 # mock_data.py
 # Chapter 14: Financial and Legal Domain Agents
 # Book: 30 Agents Every AI Engineer Must Build — Imran Ahmad (Packt Publishing)
-# Author: Imran Ahmad
+
 #
 # Synthetic data derived directly from Chapter 14's code examples, case studies,
 # and narrative descriptions. Every data structure maps to a specific chapter

@@ -1,6 +1,6 @@
 # requirements.txt
 # Chapter 3: The Art of Agent Prompting
-# Author: Imran Ahmad
+
 # Tested on Python 3.11+
 
 # Core LLM framework

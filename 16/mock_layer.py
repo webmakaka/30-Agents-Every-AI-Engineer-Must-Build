@@ -1,5 +1,5 @@
 # src/mock_layer.py
-# Author: Imran Ahmad
+
 # Ref: Chapter 16 — Embodied and Physical World Agents
 # Listings 16.1–16.7 + §Constraint formalization (p. 29)
 #

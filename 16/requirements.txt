@@ -1,5 +1,5 @@
 # requirements.txt — Chapter 16: Embodied and Physical World Agents
-# Author: Imran Ahmad
+
 # Ref: §Technical requirements (p. 2)
 #
 # Book specifies: langchain==0.2.16, langchain-openai==0.1.23,

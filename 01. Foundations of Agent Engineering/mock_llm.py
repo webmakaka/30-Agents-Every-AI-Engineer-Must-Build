@@ -14,7 +14,7 @@ import json
 import time
 import random
 
-from .utils import log_info, log_warning
+from utils import log_info, log_warning
 
 
 # ============================================================

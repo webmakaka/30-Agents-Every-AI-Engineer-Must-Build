@@ -1,7 +1,7 @@
 # src/agent_nodes.py
 # Chapter 9: Software Development Agents
 # Book: "Agents" by Imran Ahmad (Packt, 2026)
-# Author: Imran Ahmad
+
 #
 # LangGraph node functions implementing the multi-agent TDG workflow.
 # Each node receives AgentState, performs its specialized operation,

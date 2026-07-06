@@ -1,5 +1,5 @@
 # src/utils.py
-# Author: Imran Ahmad
+
 # Book: 30 Agents Every AI Engineer Must Build, Chapter 12
 # Ref: Technical Requirements (p.2), Production Failure Modes (p.35)
 # Description: Shared utilities — color-coded logging, resilience decorator,

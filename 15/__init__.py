@@ -2,7 +2,7 @@
 # utils/__init__.py — Package Exports
 # Chapter 15: Education and Knowledge Agents
 # Book: 30 Agents Every AI Engineer Must Build (Packt Publishing)
-# Author: Imran Ahmad
+
 #
 # Exports cross-cutting infrastructure for the notebook:
 #   - MockLLM: Simulation-mode LLM with section-mapped response registry

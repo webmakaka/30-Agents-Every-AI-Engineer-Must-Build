@@ -10,29 +10,31 @@ Every code cell runs **without an API key** in Simulation Mode, powered by a `Mo
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/webmakaka/30-Agents-Every-AI-Engineer-Must-Build.git
-cd ./30-Agents-Every-AI-Engineer-Must-Build/
-cd chapter01
+$ git clone https://github.com/webmakaka/30-Agents-Every-AI-Engineer-Must-Build.git
+$ cd ./30-Agents-Every-AI-Engineer-Must-Build/
+$ cd 01.\ Foundations\ of\ Agent\ Engineering/
+
 
 # 2. Create a virtual environment (recommended)
-python -m venv .venv
-source .venv/bin/activate   # Linux/Mac
+$ uv venv
+$ source .venv/bin/activate   # Linux/Mac
 
 # 3. Install dependencies
-pip install -r requirements.txt
+$ uv pip install -r requirements.txt
+$ uv pip install -r requirements-openai.txt    # For OpenAI GPT-4o
 
 # Then add your provider's dependencies:
-pip install -r requirements-ollama.txt    # For local Ollama (DeepSeek V2)
-pip install -r requirements-openai.txt    # For OpenAI GPT-4o
-pip install -r requirements-claude.txt    # For Anthropic Claude Sonnet 4
-pip install -r requirements-gemini.txt    # For Google Gemini Flash 2.5
+# pip install -r requirements-ollama.txt    # For local Ollama (DeepSeek V2)
+
+# pip install -r requirements-claude.txt    # For Anthropic Claude Sonnet 4
+# pip install -r requirements-gemini.txt    # For Google Gemini Flash 2.5
 
 # 4. (Optional) Configure your LLM provider for Live Mode
-cp .env.template .env
+# cp .env.template .env
 # Set OPENAI_API_KEY, ANTHROPIC_API_KEY, or GOOGLE_API_KEY — or use Ollama locally
 
 # 5. Launch the notebook
-jupyter notebook ch01_foundations_of_agent_engineering.ipynb
+# $ uv run jupyter notebook ch01_foundations_of_agent_engineering.ipynb
 ```
 
 ## Section Map

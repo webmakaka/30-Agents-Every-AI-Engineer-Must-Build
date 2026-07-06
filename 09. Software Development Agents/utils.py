@@ -1,7 +1,7 @@
 # src/utils.py
 # Chapter 9: Software Development Agents
 # Book: "Agents" by Imran Ahmad (Packt, 2026)
-# Author: Imran Ahmad
+
 #
 # Cross-cutting utilities: environment management, color-coded logging,
 # and the @fail_gracefully resilience decorator.

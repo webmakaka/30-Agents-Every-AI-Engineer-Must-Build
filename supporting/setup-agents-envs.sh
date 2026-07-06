@@ -2,7 +2,7 @@
 # =============================================================================
 # setup-agents-envs.sh
 # Master Environment Setup for: 30 Agents Every AI Engineer Must Build
-# Author: Imran Ahmad — auto-generated workflow
+ — auto-generated workflow
 # =============================================================================
 set -euo pipefail
 

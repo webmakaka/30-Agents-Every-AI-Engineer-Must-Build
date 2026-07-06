@@ -1,7 +1,7 @@
 # agent_logger.py
 # Chapter 11: Multi-Modal Perception Agents
 # Book: 30 Agents Every AI Engineer Must Build
-# Author: Imran Ahmad | Publisher: Packt Publishing
+ | Publisher: Packt Publishing
 #
 # Color-coded logging utility and resilience decorator used across
 # all three agent domains (Vision-Language, Audio Processing,

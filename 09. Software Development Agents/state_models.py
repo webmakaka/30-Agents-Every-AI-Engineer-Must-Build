@@ -1,7 +1,7 @@
 # src/state_models.py
 # Chapter 9: Software Development Agents
 # Book: "Agents" by Imran Ahmad (Packt, 2026)
-# Author: Imran Ahmad
+
 #
 # Pydantic data models and TypedDict state definitions for:
 #   - Task and AgentState (§9.2 — State Management)

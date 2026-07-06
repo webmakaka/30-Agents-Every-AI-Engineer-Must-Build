@@ -3,7 +3,7 @@
 # fresh-ubuntu-setup.sh
 # Complete developer environment setup for a NEW Ubuntu machine
 # Tailored for: AI/ML development, Jupyter Lab, VS Code, Python 3.11
-# Author: Imran Ahmad — machine bootstrap
+ — machine bootstrap
 # =============================================================================
 set -euo pipefail
 

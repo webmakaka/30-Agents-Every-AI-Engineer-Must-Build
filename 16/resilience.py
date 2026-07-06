@@ -1,5 +1,5 @@
 # src/resilience.py
-# Author: Imran Ahmad
+
 # Ref: Chapter 16 — Embodied and Physical World Agents
 # Visual Logging Schema specification + §Multi-rate perception-action integration
 #

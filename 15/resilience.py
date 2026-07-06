@@ -2,7 +2,7 @@
 # utils/resilience.py — ColorLogger & Graceful Fallback Decorator
 # Chapter 15: Education and Knowledge Agents
 # Book: 30 Agents Every AI Engineer Must Build (Packt Publishing)
-# Author: Imran Ahmad
+
 #
 # Cross-cutting infrastructure for visual logging and fault tolerance.
 # Ref: Strategy §4 (ColorLogger), §5 (@graceful_fallback)

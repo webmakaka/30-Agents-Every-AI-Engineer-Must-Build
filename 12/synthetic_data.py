@@ -1,5 +1,5 @@
 # src/synthetic_data.py
-# Author: Imran Ahmad
+
 # Book: 30 Agents Every AI Engineer Must Build, Chapter 12
 # Ref: Strategy §4.1 (HR Dataset), §4.2 (Medical Dataset)
 # Description: Deterministic synthetic dataset generators for the HR fairness

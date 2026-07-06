@@ -1,5 +1,5 @@
 # src/explainability_core.py
-# Author: Imran Ahmad
+
 # Book: 30 Agents Every AI Engineer Must Build, Chapter 12
 # Ref: The Explainable Agent (p.23–39)
 # Description: Complete explainability pipeline — reasoning transparency,

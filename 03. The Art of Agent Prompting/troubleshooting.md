@@ -1,6 +1,8 @@
 # Troubleshooting Guide
+
 ## Chapter 3: The Art of Agent Prompting
-### Author: Imran Ahmad
+
+##
 
 This guide addresses the most common dependency conflicts and runtime
 issues when setting up the Chapter 3 companion repository.
@@ -16,12 +18,14 @@ or `PydanticUserError: 'fields' is not supported in Pydantic v2`.
 environment has pinned Pydantic v1.
 
 **Fix:**
+
 ```
 pip install --upgrade pydantic>=2.9.0
 pip install --upgrade langchain-core
 ```
 
 If the conflict persists, create a fresh virtual environment:
+
 ```
 python -m venv .venv
 source .venv/bin/activate   # Linux/Mac
@@ -40,6 +44,7 @@ pip install -r requirements.txt
 uses `from langchain_core.messages import AIMessage`.
 
 **Fix:** This repository uses the split-package architecture. Install:
+
 ```
 pip install langchain-core langchain-openai
 ```
@@ -59,11 +64,13 @@ escape sequences. Common in some Windows terminals and older Jupyter
 versions.
 
 **Fix (Jupyter):** Upgrade Jupyter:
+
 ```
 pip install --upgrade jupyter ipykernel
 ```
 
 **Fix (Windows):** Use Windows Terminal (not cmd.exe) or enable ANSI:
+
 ```python
 import os
 os.system("")  # Enables ANSI on Windows cmd
@@ -83,6 +90,7 @@ terminal and notebook output.
 input natively.
 
 **Fix:** Skip the interactive fallback by setting your key in `.env`:
+
 ```
 cp .env.template .env
 # Edit .env and paste your API key
@@ -105,6 +113,7 @@ using `prompt | mock_llm`.
 
 **Fix:** Ensure you are importing from this repository's `mock_llm.py`,
 not a different mock:
+
 ```python
 from mock_llm import MockLLM
 llm = MockLLM()
@@ -123,11 +132,13 @@ errors.
 **Cause:** This repository requires Python 3.11 or higher.
 
 **Fix:** Check your version:
+
 ```
 python --version
 ```
 
 If below 3.11, upgrade Python. We recommend using pyenv:
+
 ```
 pyenv install 3.11.9
 pyenv local 3.11.9
@@ -157,6 +168,7 @@ chapter content.
 or other compiled packages.
 
 **Fix:**
+
 ```
 pip install --upgrade --force-reinstall langchain-core pydantic
 ```

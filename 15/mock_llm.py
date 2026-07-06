@@ -2,7 +2,7 @@
 # utils/mock_llm.py — MockLLM Class & Section-Mapped Response Registry
 # Chapter 15: Education and Knowledge Agents
 # Book: 30 Agents Every AI Engineer Must Build (Packt Publishing)
-# Author: Imran Ahmad
+
 #
 # Simulation-mode LLM that returns pre-authored, educationally accurate
 # responses keyed to specific chapter sections. Enables full notebook

@@ -1,5 +1,5 @@
 # src/mock_llm.py
-# Author: Imran Ahmad
+
 # Book: 30 Agents Every AI Engineer Must Build, Chapter 12
 # Ref: Strategy §3.1 (MockLLM Handler Map), §3.2 (Mock Metadata Schema)
 # Description: Context-aware MockLLM with response handlers mapped to chapter

@@ -1,5 +1,5 @@
 # src/__init__.py
-# Author: Imran Ahmad
+
 # Book: 30 Agents Every AI Engineer Must Build, Chapter 12
 # Description: Package exports for the Chapter 12 source modules.
 

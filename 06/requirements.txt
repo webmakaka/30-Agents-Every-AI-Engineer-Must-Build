@@ -1,5 +1,5 @@
 # Chapter 6 — Information Retrieval and Knowledge Agents
-# Author: Imran Ahmad
+
 # Python >= 3.10 required
 #
 # Install: pip install -r requirements.txt

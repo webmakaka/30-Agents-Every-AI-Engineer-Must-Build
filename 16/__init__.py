@@ -1,5 +1,5 @@
 # src/__init__.py
-# Author: Imran Ahmad
+
 # Ref: Chapter 16 — Embodied and Physical World Agents
 #
 # Package init for the chapter16-embodied-agents support library.

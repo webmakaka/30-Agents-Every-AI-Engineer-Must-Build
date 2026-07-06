@@ -1,7 +1,7 @@
 # mock_backends.py
 # Chapter 11: Multi-Modal Perception Agents
 # Book: 30 Agents Every AI Engineer Must Build
-# Author: Imran Ahmad | Publisher: Packt Publishing
+ | Publisher: Packt Publishing
 #
 # Simulation Mode backends for all three agent domains.
 # Each mock class mirrors the real API surface used in the chapter code

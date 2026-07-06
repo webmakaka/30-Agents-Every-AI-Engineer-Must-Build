@@ -154,3 +154,37 @@ All five variants produce equivalent pedagogical output with identical cell stru
 - **Want real LLM output?** Set one API key in `.env` and open the matching notebook.
 - **Prefer local inference?** Install [Ollama](https://ollama.com), pull the models, and open the `__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B` notebook — no API key, no cloud calls, everything stays on your machine. See [LOCAL_LLM_SETUP.md](chapter01/LOCAL_LLM_SETUP.md) for step-by-step instructions on Windows, macOS, and Linux.
 - **Which provider is best?** See the **[LLM Provider Comparison Summary](LLM_COMPARISON_SUMMARY.md)** for head-to-head results across all 17 chapters with Bloom's taxonomy analysis, visualizations, and per-domain recommendations.
+
+<br/>
+
+## OpenAI Compatible URLs
+
+<br/>
+
+```python
+ANTHROPIC_BASE_URL = "https://api.anthropic.com/v1/"
+DEEPSEEK_BASE_URL = "https://api.deepseek.com/v1"
+GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
+GITHUB_BASE_URL = "https://models.github.ai/inference"
+GROQ_BASE_URL = "https://api.groq.com/openai/v1"
+GROK_BASE_URL = "https://api.x.ai/v1"
+OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+OLLAMA_BASE_URL = "http://localhost:11434/v1"
+```
+
+<br/>
+
+```python
+BASE_URL_GITHUB = "https://models.github.ai/inference"
+BASE_URL = BASE_URL_GITHUB
+MODEL_GPT_4o_MINI = "gpt-4o-mini"
+MODEL_LLAMA = "Llama-3.3-70B-Instruct"
+MODEL_NAME = MODEL_GPT_4o_MINI
+API_KEY = "github_pat_"
+```
+
+<br/>
+
+## GitHub Models
+
+https://github.com/marketplace/models

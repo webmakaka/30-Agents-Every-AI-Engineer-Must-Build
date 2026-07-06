@@ -1,7 +1,7 @@
 # src/mock_llm.py
 # Chapter 9: Software Development Agents
 # Book: "Agents" by Imran Ahmad (Packt, 2026)
-# Author: Imran Ahmad
+
 #
 # Simulation Mode engine: MockLLM (keyword-matched response registry)
 # and MockTestRunner (progressive pass/fail simulator).
