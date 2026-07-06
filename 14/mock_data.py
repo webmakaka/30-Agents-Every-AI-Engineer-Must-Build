@@ -163,7 +163,7 @@ def generate_mock_price_history(symbol: str = "AAPL",
     Returns:
         dict with 'Close' key containing a list of daily close prices.
 
-    Author: Imran Ahmad
+    
     Ref: Chapter 14, Section 14.1.2 (p.11-12)
     """
     rng = random.Random(seed)

@@ -29,8 +29,6 @@ class MockResponse:
         content (str): The response text.
         model (str): Model identifier (default: "mock-gpt-4").
         usage (dict): Simulated token usage counts.
-
-    Author: Imran Ahmad
     """
 
     def __init__(self, content, model="mock-gpt-4", usage=None):
@@ -63,8 +61,6 @@ class MockLLM:
         simulate_latency (bool): Whether to add 0.3-0.8s delay per call.
         failure_rate (float): Probability [0.0, 1.0] of raising a
             ConnectionError to simulate API failures.
-
-    Author: Imran Ahmad
     """
 
     def __init__(self, simulate_latency=True, failure_rate=0.0):
@@ -86,7 +82,7 @@ class MockLLM:
         Raises:
             ConnectionError: If failure_rate check triggers (simulated API failure).
 
-        Author: Imran Ahmad
+        
         """
         # Simulate network latency
         if self.simulate_latency:
@@ -111,7 +107,7 @@ class MockLLM:
 
         Iterates in reverse to find the most recent 'user' role message.
 
-        Author: Imran Ahmad
+        
         """
         for msg in reversed(messages):
             if isinstance(msg, dict) and msg.get("role") == "user":
@@ -131,7 +127,7 @@ class MockLLM:
         Returns:
             tuple: (response_text, section_ref) from the best-matching entry.
 
-        Author: Imran Ahmad
+        
         """
         best_score = 0
         best_response = None
@@ -152,7 +148,7 @@ class MockLLM:
     def _default_response(self):
         """Fallback response when no keywords match.
 
-        Author: Imran Ahmad
+        
         """
         return (
             "This is a simulated response from MockLLM. The requested topic "
@@ -171,7 +167,7 @@ class MockLLM:
 
         Ref: Strategy §4 — Mock Response Bank
 
-        Author: Imran Ahmad
+        
         """
         return [
             # ── §1.2.1 Cognitive Loop ────────────────────────────

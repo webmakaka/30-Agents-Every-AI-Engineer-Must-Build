@@ -2,7 +2,7 @@
 mock_llm.py — Simulation Layer for Chapter 10
 
 Book: 30 Agents Every AI Engineer Must Build
-Author: Imran Ahmad
+
 Chapter: 10 — Conversational and Content Creation Agents
 
 This module provides drop-in replacements for LangChain's ChatOpenAI and

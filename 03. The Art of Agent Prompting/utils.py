@@ -1,7 +1,7 @@
 """
 Utility module for Chapter 3: The Art of Agent Prompting
 Book: Agents by Imran Ahmad (Packt Publishing, 2026)
-Author: Imran Ahmad
+
 
 Provides:
     - ColorLogger: ANSI-colored logging for notebook visual feedback
@@ -22,8 +22,6 @@ class ColorLogger:
     Blue  [INFO]           — Operation starting
     Green [SUCCESS]        — Operation completed successfully
     Red   [HANDLED ERROR]  — Error caught and handled gracefully
-
-    Author: Imran Ahmad
     """
 
     BLUE = "\033[94m"
@@ -65,8 +63,6 @@ def graceful_fallback(section_ref: str, fallback_value=None):
     Args:
         section_ref: Chapter section reference (e.g., "Section 3.6 - ToT")
         fallback_value: Optional value to return on failure
-
-    Author: Imran Ahmad
     """
 
     def decorator(func):
@@ -113,8 +109,6 @@ def get_api_key() -> str | None:
     3. Legacy fallback to OPENAI_API_KEY environment variable
     4. Falls back to interactive getpass input
     5. Returns None if no valid key found (triggers Simulation Mode)
-
-    Author: Imran Ahmad
     """
     global _LLM_PROVIDER
     load_dotenv()

@@ -1,6 +1,6 @@
 """
 Agent Utilities — Chapter 6: Information Retrieval and Knowledge Agents
-Author: Imran Ahmad
+
 Book: AI Agents (Packt, 2026)
 
 Provides: ColorLogger, resilience decorator, API key management,

@@ -12,7 +12,7 @@ Provides:
   - CollaborationSpectrumSimulator: Task routing spectrum (pp. 6-8)
 
 All data is synthetic and derived from specific chapter content.
-Author: Imran Ahmad
+
 """
 
 import random
@@ -31,9 +31,7 @@ np.random.seed(42)
 class MockLLM:
     """
     Context-aware mock language model.
-    Routes queries by keyword matching to chapter-faithful responses.
-    Author: Imran Ahmad
-    """
+    Routes queries by keyword matching to chapter-faithful responses.    """
 
     RESPONSE_REGISTRY = {
         "architecture": (
@@ -118,9 +116,7 @@ class ArchitectureRegistrySimulator:
     Ref: Ch.17, pp.1-2, 'Autonomous agent evolution and adaptation'
 
     Key concept: meta-optimization over space A, maximizing P(a) subject
-    to alignment constraints a ∈ C.
-    Author: Imran Ahmad
-    """
+    to alignment constraints a ∈ C.    """
 
     def __init__(self):
         self.registry = [
@@ -215,9 +211,7 @@ class AgentSocietySimulator:
     """
     Simulates emergent agent society with DeGroot belief convergence,
     reputation ledgers, and spontaneous specialization.
-    Ref: Ch.17, pp.2-3, 'Agent societies and emergent behaviors'
-    Author: Imran Ahmad
-    """
+    Ref: Ch.17, pp.2-3, 'Agent societies and emergent behaviors'    """
 
     def __init__(self):
         self.agent_names = ["Agent-0 (Analyst)", "Agent-1 (Researcher)",
@@ -328,9 +322,7 @@ class EthicalCircuitBreakerSimulator:
       Level 1: Log alert
       Level 2: Increase human oversight
       Level 3: Restrict autonomy to pre-approved actions
-      Level 4: Halt operation
-    Author: Imran Ahmad
-    """
+      Level 4: Halt operation    """
 
     RESPONSE_LEVELS = {
         1: {"name": "Log Alert", "action": "Logging anomaly for review. Agent continues normally."},
@@ -432,9 +424,7 @@ class MemoryConsolidationSimulator:
     Ref: Ch.17, pp.4-6, 'Brain-inspired cognitive architectures'
 
     Based on complementary learning systems theory (McClelland et al., 1995)
-    and Wilson-McNaughton hippocampal replay research.
-    Author: Imran Ahmad
-    """
+    and Wilson-McNaughton hippocampal replay research.    """
 
     def __init__(self):
         self.episodic_memory = [
@@ -589,9 +579,7 @@ class CollaborationSpectrumSimulator:
     Ref: Ch.17, pp.6-8, 'Strategic implementation' and 'The evolving relationship
     between humans and artificial intelligence'
 
-    Incorporates Quandri case study metrics (p.7) and crawl-walk-run model (p.6).
-    Author: Imran Ahmad
-    """
+    Incorporates Quandri case study metrics (p.7) and crawl-walk-run model (p.6).    """
 
     ROUTING_BANDS = {
         "autonomous": "Agent handles independently. No human involvement.",

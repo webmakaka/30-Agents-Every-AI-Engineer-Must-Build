@@ -15,9 +15,7 @@ import functools
 
 class ColorLogger:
     """
-    Visual logging with ANSI color codes for clear notebook output.
-    Author: Imran Ahmad
-    """
+    Visual logging with ANSI color codes for clear notebook output.    """
     BLUE  = "\033[94m"
     GREEN = "\033[92m"
     RED   = "\033[91m"

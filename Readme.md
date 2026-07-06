@@ -70,6 +70,40 @@ Finally, we apply these core architectures to transform specific domains:
 | **API Keys** | **None required** — every chapter runs in Simulation Mode with built-in MockLLM responses. Optional: OpenAI, Anthropic, or Google API key unlocks Live Mode. Local Ollama requires no key. |
 | **Ollama**   | Optional — for local LLM mode: [install Ollama](https://ollama.com), then `ollama pull deepseek-v2:16b` and `ollama pull llama3.1:8b`. 16 GB+ RAM recommended.                             |
 
+<br/>
+
+## OpenAI Compatible URLs
+
+<br/>
+
+```python
+ANTHROPIC_BASE_URL = "https://api.anthropic.com/v1/"
+DEEPSEEK_BASE_URL = "https://api.deepseek.com/v1"
+GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
+GITHUB_BASE_URL = "https://models.github.ai/inference"
+GROQ_BASE_URL = "https://api.groq.com/openai/v1"
+GROK_BASE_URL = "https://api.x.ai/v1"
+OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+OLLAMA_BASE_URL = "http://localhost:11434/v1"
+```
+
+<br/>
+
+```python
+BASE_URL_GITHUB = "https://models.github.ai/inference"
+BASE_URL = BASE_URL_GITHUB
+MODEL_GPT_4o_MINI = "gpt-4o-mini"
+MODEL_LLAMA = "Llama-3.3-70B-Instruct"
+MODEL_NAME = MODEL_GPT_4o_MINI
+API_KEY = "github_pat_"
+```
+
+<br/>
+
+## GitHub Models
+
+https://github.com/marketplace/models
+
 ---
 
 ## The 30 Agents at a Glance
@@ -106,85 +140,3 @@ Finally, we apply these core architectures to transform specific domains:
 | 28  | [The Education Intelligence Agent](chapter15/ch15_education_and_knowledge_agents.ipynb)       | Ch 15: Education & Knowledge Agents             |
 | 29  | [The Collective Intelligence Agent](chapter15/ch15_education_and_knowledge_agents.ipynb)      | Ch 15: Education & Knowledge Agents             |
 | 30  | [The Embodied Intelligence Agent](chapter16/ch16_embodied_agents.ipynb)                       | Ch 16: Embodied & Physical World Agents         |
-
----
-
-## Quick Start
-
-```bash
-# Clone the repository
-git clone https://github.com/webmakaka/30-Agents-Every-AI-Engineer-Must-Build.git
-cd 30-Agents-Every-AI-Engineer-Must-Build
-
-# Navigate to a chapter
-cd chapter05
-
-# Install base dependencies
-pip install -r requirements.txt
-
-# Install your chosen provider's dependencies
-pip install -r requirements-openai.txt    # For OpenAI GPT-4o
-pip install -r requirements-claude.txt    # For Anthropic Claude Sonnet 4
-pip install -r requirements-gemini.txt    # For Google Gemini Flash 2.5
-pip install -r requirements-ollama.txt    # For local Ollama (no API key)
-
-# (Optional) Configure your API key for Live Mode
-cp .env.template .env
-# Set ONE of: OPENAI_API_KEY, ANTHROPIC_API_KEY, or GOOGLE_API_KEY
-
-# Launch the notebook
-jupyter notebook ch05_foundational_architectures.ipynb
-```
-
-### Choose Your LLM Provider
-
-Every chapter includes **five pre-executed notebook variants** — pick the one that matches your setup:
-
-| Notebook Suffix                      | Provider       | API Key             | Model                                     |
-| ------------------------------------ | -------------- | ------------------- | ----------------------------------------- |
-| `__RUN_NO_KEY_SIMULATION`            | None (MockLLM) | None                | Built-in chapter-derived mock responses   |
-| `__RUN_OPENAI_GPT4o`                 | OpenAI         | `OPENAI_API_KEY`    | GPT-4o / GPT-4o-mini                      |
-| `__RUN_CLAUDE_Sonnet4`               | Anthropic      | `ANTHROPIC_API_KEY` | Claude Sonnet 4                           |
-| `__RUN_GEMINI_Flash25`               | Google         | `GOOGLE_API_KEY`    | Gemini Flash 2.5                          |
-| `__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B` | Ollama (local) | None                | DeepSeek V2 16B + Llama 3.1 8B embeddings |
-
-All five variants produce equivalent pedagogical output with identical cell structure. Every notebook is pre-executed with outputs saved, so you can browse them directly on GitHub without running any code.
-
-- **No setup at all?** Open the `__RUN_NO_KEY_SIMULATION` notebook — it runs entirely on MockLLM with no dependencies.
-- **Want real LLM output?** Set one API key in `.env` and open the matching notebook.
-- **Prefer local inference?** Install [Ollama](https://ollama.com), pull the models, and open the `__RUN_LOCAL_OLLAMA_DeepSeek_V2_16B` notebook — no API key, no cloud calls, everything stays on your machine. See [LOCAL_LLM_SETUP.md](chapter01/LOCAL_LLM_SETUP.md) for step-by-step instructions on Windows, macOS, and Linux.
-- **Which provider is best?** See the **[LLM Provider Comparison Summary](LLM_COMPARISON_SUMMARY.md)** for head-to-head results across all 17 chapters with Bloom's taxonomy analysis, visualizations, and per-domain recommendations.
-
-<br/>
-
-## OpenAI Compatible URLs
-
-<br/>
-
-```python
-ANTHROPIC_BASE_URL = "https://api.anthropic.com/v1/"
-DEEPSEEK_BASE_URL = "https://api.deepseek.com/v1"
-GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
-GITHUB_BASE_URL = "https://models.github.ai/inference"
-GROQ_BASE_URL = "https://api.groq.com/openai/v1"
-GROK_BASE_URL = "https://api.x.ai/v1"
-OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
-OLLAMA_BASE_URL = "http://localhost:11434/v1"
-```
-
-<br/>
-
-```python
-BASE_URL_GITHUB = "https://models.github.ai/inference"
-BASE_URL = BASE_URL_GITHUB
-MODEL_GPT_4o_MINI = "gpt-4o-mini"
-MODEL_LLAMA = "Llama-3.3-70B-Instruct"
-MODEL_NAME = MODEL_GPT_4o_MINI
-API_KEY = "github_pat_"
-```
-
-<br/>
-
-## GitHub Models
-
-https://github.com/marketplace/models

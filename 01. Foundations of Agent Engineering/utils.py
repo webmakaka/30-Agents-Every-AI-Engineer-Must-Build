@@ -32,32 +32,24 @@ RESET = "\033[0m"
 
 def log_info(message):
     """Print a blue [INFO] message. Used before any agent operation.
-
-    Author: Imran Ahmad
     """
     print(f"{BLUE}[INFO]{RESET} {message}")
 
 
 def log_success(message):
     """Print a green bold [SUCCESS] message. Used after successful operations.
-
-    Author: Imran Ahmad
     """
     print(f"{GREEN}{BOLD}[SUCCESS]{RESET} {message}")
 
 
 def log_error(message):
     """Print a red bold [HANDLED ERROR] message. Used when exceptions are caught.
-
-    Author: Imran Ahmad
     """
     print(f"{RED}{BOLD}[HANDLED ERROR]{RESET} {message}")
 
 
 def log_warning(message):
     """Print a yellow [WARNING] message. Used for non-critical issues.
-
-    Author: Imran Ahmad
     """
     print(f"{YELLOW}[WARNING]{RESET} {message}")
 
@@ -69,8 +61,6 @@ def log_warning(message):
 
 def simulation_mode_banner():
     """Display a yellow banner announcing Simulation Mode.
-
-    Author: Imran Ahmad
     """
     banner = "=" * 60
     print(f"\n{YELLOW}{BOLD}{banner}")
@@ -82,8 +72,6 @@ def simulation_mode_banner():
 
 def live_mode_banner():
     """Display a green banner announcing Live API Mode.
-
-    Author: Imran Ahmad
     """
     provider = get_provider()
     provider_label = {
@@ -121,8 +109,6 @@ def detect_api_key():
     Returns:
         tuple: (api_key_or_None, mode_string)
             mode_string is either "LIVE" or "SIMULATION".
-
-    Author: Imran Ahmad
     """
     global _LLM_PROVIDER
 
@@ -263,8 +249,6 @@ def graceful_fallback(fallback_value, section_ref=""):
 
     Returns:
         Decorator that wraps the target function.
-
-    Author: Imran Ahmad
     """
     def decorator(func):
         @functools.wraps(func)

@@ -28,7 +28,7 @@ class ColorLogger:
     Provides visual distinction between information (BLUE), success (GREEN),
     error (RED), and warning (YELLOW) messages with ISO timestamps.
 
-    Author: Imran Ahmad
+    
     Ref: Chapter 14, all sections
     """
 
@@ -83,7 +83,7 @@ class ServiceConfig:
     then falls back to getpass if running interactively. Empty inputs
     activate Simulation Mode for that service.
 
-    Author: Imran Ahmad
+    
     Ref: Chapter 14, Technical Requirements (p.2)
     """
 
@@ -130,7 +130,7 @@ class ServiceConfig:
         print(f"\n{border}")
         print("  CHAPTER 14 — SERVICE STATUS DASHBOARD")
         print("  Book: 30 Agents Every AI Engineer Must Build")
-        print("  Author: Imran Ahmad")
+        print("  ")
         print(border)
         for env_var, label in self.SERVICES.items():
             is_live = self.status[env_var]
@@ -171,7 +171,7 @@ def graceful_fallback(
         max_retries: Number of retry attempts before falling back.
         base_delay: Base delay in seconds for exponential backoff.
 
-    Author: Imran Ahmad
+    
     Ref: Chapter 14, Sections 14.1.1–14.2.4
     """
 
@@ -222,7 +222,7 @@ except ImportError:
 def _classify_and_respond(query: str) -> str:
     """Classify query by keyword and return chapter-faithful response.
 
-    Author: Imran Ahmad
+    
     Ref: Chapter 14, Sections 14.1–14.2
     """
     q = query.lower()
@@ -319,7 +319,7 @@ if _HAS_LANGCHAIN:
         create_react_agent, the pipe operator (|), bind_tools(), and
         with_structured_output().
 
-        Author: Imran Ahmad
+        
         Ref: Chapter 14, Section 14.1
         """
 
@@ -405,7 +405,7 @@ else:
     class MockChatOpenAI:
         """Minimal mock LLM for environments without langchain.
 
-        Author: Imran Ahmad
+        
         Ref: Chapter 14, Section 14.1
         """
 
@@ -449,7 +449,7 @@ class MockStructuredChain:
     Uses a class-level step counter so routing progresses even when
     new instances are created by with_structured_output() calls.
 
-    Author: Imran Ahmad
+    
     Ref: Chapter 14, Section 14.1 (p.4-5)
     """
 
@@ -500,7 +500,7 @@ class MockEmbeddingModel:
     Produces consistent embeddings for the same input text, enabling
     reproducible similarity comparisons without a real embedding model.
 
-    Author: Imran Ahmad
+    
     Ref: Chapter 14, Section 14.2.1 (p.20-22)
     """
 
@@ -542,7 +542,7 @@ class MockEmbeddingModel:
 class MockSearchResult:
     """Container for vector search results with metadata.
 
-    Author: Imran Ahmad
+    
     Ref: Chapter 14, Section 14.2.1
     """
 
@@ -562,7 +562,7 @@ class MockVectorStore:
     Supports upsert(), query(), and verify_citation() operations
     needed by LegalKnowledgeBase and the citation verification gate.
 
-    Author: Imran Ahmad
+    
     Ref: Chapter 14, Section 14.2.1 (p.20-22)
     """
 

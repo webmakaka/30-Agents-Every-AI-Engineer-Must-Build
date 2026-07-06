@@ -17,7 +17,7 @@ Components:
     - MockToolkit: Mock implementations of all chapter tool demos
     - MockMemory: Simulated conversation memory (buffer and summary)
 
-Author: Imran Ahmad
+
 """
 
 import os
@@ -45,7 +45,7 @@ class AgentLogger:
     Provides four log levels with distinct ANSI colors for clear
     visual separation in Jupyter notebooks and terminals.
 
-    Author: Imran Ahmad — Chapter 2, The Agent Engineer's Toolkit
+     — Chapter 2, The Agent Engineer's Toolkit
     """
 
     BLUE = "\033[94m"
@@ -118,8 +118,6 @@ def fail_gracefully(
         section_ref: Chapter section reference (e.g., "LangChain Agent, p.4-5")
         fallback_value: Value to return on failure. If None, returns a
                         formatted simulation fallback string.
-
-    Author: Imran Ahmad
     """
     def decorator(func):
         @functools.wraps(func)
@@ -159,8 +157,6 @@ def detect_mode() -> Tuple[str, Optional[str]]:
     Returns:
         Tuple of (mode, api_key) where mode is "live" or "simulation"
         and api_key is the key string or None.
-
-    Author: Imran Ahmad
     """
     # Step 1: Try dotenv
     try:
@@ -213,7 +209,7 @@ class MockLLM:
         llm = MockLLM()
         result = llm.invoke("What is the square root of 144?")
 
-    Author: Imran Ahmad — Chapter 2, The Agent Engineer's Toolkit
+     — Chapter 2, The Agent Engineer's Toolkit
     """
 
     def __init__(self):
@@ -503,7 +499,7 @@ class MockToolkit:
     Each method mirrors a tool from the chapter's code examples and
     returns deterministic, chapter-relevant data.
 
-    Author: Imran Ahmad — Chapter 2, The Agent Engineer's Toolkit
+     — Chapter 2, The Agent Engineer's Toolkit
     """
 
     @staticmethod
@@ -693,7 +689,7 @@ class MockMemory:
         - "buffer": ConversationBufferMemory (stores full history)
         - "summary": ConversationSummaryMemory (compressed summary)
 
-    Author: Imran Ahmad — Chapter 2, The Agent Engineer's Toolkit
+     — Chapter 2, The Agent Engineer's Toolkit
     """
 
     def __init__(self, mode: str = "buffer"):

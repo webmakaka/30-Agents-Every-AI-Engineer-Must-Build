@@ -13,7 +13,7 @@ Provides shared infrastructure for the Chapter 4 companion notebook:
                        (Ref: Section 4.5, Tables 4.3a/b, pp. 18–19)
   - format_table()   : ASCII table renderer for notebook output
 
-Author: Imran Ahmad
+
 """
 
 from __future__ import annotations
@@ -39,7 +39,7 @@ class AgentLogger:
         Red   — [HANDLED ERROR]
         Bold  — section headers
 
-    Author: Imran Ahmad
+    
     Ref: Chapter 4, all sections
     """
 
@@ -52,7 +52,7 @@ class AgentLogger:
     def __init__(self, verbose: bool = False, html_mode: bool = False) -> None:
         """Initialise logger with optional verbose and HTML modes.
 
-        Author: Imran Ahmad
+        
         """
         self.verbose = verbose
         self.html_mode = html_mode
@@ -62,7 +62,7 @@ class AgentLogger:
     def _emit(self, color: str, tag: str, msg: str) -> None:
         """Print a formatted log line with ANSI colour or HTML.
 
-        Author: Imran Ahmad
+        
         """
         if self.html_mode:
             color_map = {
@@ -83,24 +83,24 @@ class AgentLogger:
     # -- public API ---------------------------------------------------------
 
     def info(self, msg: str) -> None:
-        """Log an informational message (Blue). Author: Imran Ahmad"""
+        """Log an informational message (Blue). """
         self._emit(self.BLUE, "INFO", msg)
 
     def success(self, msg: str) -> None:
-        """Log a success message (Green). Author: Imran Ahmad"""
+        """Log a success message (Green). """
         self._emit(self.GREEN, "SUCCESS", msg)
 
     def error(self, msg: str) -> None:
-        """Log a handled-error message (Red). Author: Imran Ahmad"""
+        """Log a handled-error message (Red). """
         self._emit(self.RED, "HANDLED ERROR", msg)
 
     def debug(self, msg: str) -> None:
-        """Log a debug message (Blue). Only visible when verbose=True. Author: Imran Ahmad"""
+        """Log a debug message (Blue). Only visible when verbose=True. """
         if self.verbose:
             self._emit(self.BLUE, "DEBUG", msg)
 
     def section_header(self, num: str, title: str) -> None:
-        """Print a bold section divider for notebook cells. Author: Imran Ahmad"""
+        """Print a bold section divider for notebook cells. """
         line = f"{'═' * 3} Section {num}: {title} {'═' * 3}"
         if self.html_mode:
             from IPython.display import display, HTML
@@ -136,7 +136,7 @@ def fail_gracefully(
         def call_external_tool(endpoint):
             ...
 
-    Author: Imran Ahmad
+    
     Ref: Section 4.3, Table 4.1 — Failover Models
     """
 
@@ -172,12 +172,12 @@ class CostTracker:
     returns ``"degraded"`` — modelling the graceful-degradation strategy
     described in Section 4.2 (p. 8).
 
-    Author: Imran Ahmad
+    
     Ref: Section 4.2, Figure 4.2, pp. 7–9
     """
 
     def __init__(self, budget_ceiling: float = 1.00) -> None:
-        """Initialise with a budget ceiling for degradation. Author: Imran Ahmad"""
+        """Initialise with a budget ceiling for degradation. """
         self.budget_ceiling = budget_ceiling
         self._records: List[Dict[str, Any]] = []
         self._total_cost: float = 0.0
@@ -188,7 +188,7 @@ class CostTracker:
     def record(self, model: str, tokens: int, cost: float) -> None:
         """Log a single inference cost event.
 
-        Author: Imran Ahmad
+        
         Ref: Section 4.2 — Monitoring & Iterative Optimization, p. 8
         """
         self._records.append({
@@ -205,7 +205,7 @@ class CostTracker:
     def check_budget(self) -> str:
         """Return ``'ok'`` or ``'degraded'`` based on cumulative spend.
 
-        Author: Imran Ahmad
+        
         Ref: Section 4.2 — Cost-Aware Routing & Budget Enforcement, p. 8
         """
         if self._total_cost >= self.budget_ceiling:
@@ -224,7 +224,7 @@ class CostTracker:
         Includes per-model and per-tier breakdown, mirroring the token cost
         dashboards described in Section 4.2 (p. 8).
 
-        Author: Imran Ahmad
+        
         Ref: Section 4.2 — Monitoring & Iterative Optimization
         """
         if not self._records:
@@ -269,7 +269,7 @@ class CostTracker:
     def reset(self) -> None:
         """Clear all records (useful between demo sections).
 
-        Author: Imran Ahmad
+        
         """
         self._records.clear()
         self._total_cost = 0.0
@@ -301,7 +301,7 @@ class CircuitBreaker:
     recovery_timeout : float
         Seconds before transitioning from open → half_open.
 
-    Author: Imran Ahmad
+    
     Ref: Section 4.3, Table 4.1, pp. 14–15
     """
 
@@ -310,7 +310,7 @@ class CircuitBreaker:
         failure_threshold: int = 3,
         recovery_timeout: float = 5.0,
     ) -> None:
-        """Initialise breaker with configurable threshold and timeout. Author: Imran Ahmad"""
+        """Initialise breaker with configurable threshold and timeout. """
         self.failure_threshold = failure_threshold
         self.recovery_timeout = recovery_timeout
         self._failure_count: int = 0
@@ -323,7 +323,7 @@ class CircuitBreaker:
     def state(self) -> str:
         """Current breaker state: ``'closed'``, ``'open'``, or ``'half_open'``.
 
-        Author: Imran Ahmad
+        
         Ref: Section 4.3, pp. 14–15
         """
         if self._state == "open":
@@ -345,7 +345,7 @@ class CircuitBreaker:
         ``{"status": "unavailable", "fallback": True}`` is returned —
         matching the fallback dict on p. 15 of the book.
 
-        Author: Imran Ahmad
+        
         Ref: Section 4.3, pp. 14–15
         """
         current_state = self.state  # triggers open→half_open check
@@ -389,7 +389,7 @@ class CircuitBreaker:
     def reset(self) -> None:
         """Reset the breaker to closed state (for demo re-runs).
 
-        Author: Imran Ahmad
+        
         """
         self._failure_count = 0
         self._state = "closed"
@@ -426,12 +426,12 @@ class InputValidator:
     Section 4.5 (p. 21): strip malicious tokens, enforce structured
     prompts, and isolate user input from system commands.
 
-    Author: Imran Ahmad
+    
     Ref: Section 4.5, Tables 4.3a/b (pp. 18–19), p. 21
     """
 
     def __init__(self) -> None:
-        """Initialise with compiled threat patterns from Table 4.3b. Author: Imran Ahmad"""
+        """Initialise with compiled threat patterns from Table 4.3b. """
         self._compiled = [
             (re.compile(pat), label)
             for pat, label in _INJECTION_PATTERNS
@@ -448,7 +448,7 @@ class InputValidator:
         Returns a dict with ``'clean_text'``, ``'threats_found'``, and
         ``'risk_level'``.
 
-        Author: Imran Ahmad
+        
         Ref: Section 4.5, Table 4.3b, pp. 18–19
         """
         threats: List[str] = []
@@ -484,7 +484,7 @@ class InputValidator:
 
         Returns ``{"valid": True/False, "errors": [...]}``.
 
-        Author: Imran Ahmad
+        
         Ref: Section 4.5, p. 21 — Prompt schema enforcement
         """
         errors: List[str] = []
@@ -505,7 +505,7 @@ class InputValidator:
 
         Returns ``{"allowed": True/False, "remaining": int}``.
 
-        Author: Imran Ahmad
+        
         Ref: Section 4.5, p. 21 — Interface hardening (rate-limiting)
         """
         now = time.time()
@@ -542,8 +542,6 @@ def format_table(headers: List[str], rows: List[List[str]]) -> str:
     -------
     str
         Formatted table string ready for ``print()``.
-
-    Author: Imran Ahmad
     """
     all_rows = [headers] + rows
     col_widths = [

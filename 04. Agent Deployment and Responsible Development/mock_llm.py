@@ -12,7 +12,7 @@ Components
 - MockLLM        : Main simulation class with per-section methods
 - SyntheticDataFactory : Deterministic dataset generators (seed=42)
 
-Author: Imran Ahmad
+
 """
 
 from __future__ import annotations
@@ -271,7 +271,7 @@ class MockLLM:
     latency_ms : int
         Simulated latency per call (configurable, not hardcoded).
 
-    Author: Imran Ahmad
+    
     Ref: Chapter 4, all sections
     """
 
@@ -280,7 +280,7 @@ class MockLLM:
         default_model: str = "mock-gpt-3.5",
         latency_ms: int = 150,
     ) -> None:
-        """Initialise with model name and configurable latency. Author: Imran Ahmad"""
+        """Initialise with model name and configurable latency. """
         self.default_model = default_model
         self.latency_ms = latency_ms
         self._call_count: int = 0
@@ -316,7 +316,7 @@ class MockLLM:
             One of ``'reactive'``, ``'deliberative'``, ``'hybrid'``,
             ``'multi_agent'``.
 
-        Author: Imran Ahmad
+        
         Ref: Section 4.1, Figure 4.1, pp. 3–6
         """
         self._simulate_latency()
@@ -340,7 +340,7 @@ class MockLLM:
         Simulates the lightweight classifier described on p. 10 that
         handles intent recognition before downstream routing.
 
-        Author: Imran Ahmad
+        
         Ref: Section 4.2, p. 10 — Tier 1 definition
         """
         self._simulate_latency()
@@ -376,7 +376,7 @@ class MockLLM:
         more capable (and more expensive) models, as described on
         pp. 7–8.
 
-        Author: Imran Ahmad
+        
         Ref: Section 4.2, pp. 7–8 — Confidence-based escalation
         """
         self._simulate_latency()
@@ -403,7 +403,7 @@ class MockLLM:
         - Tier 2: intermediate models for moderate reasoning (GPT-3.5)
         - Tier 3: high-accuracy models for complex tasks (GPT-4)
 
-        Author: Imran Ahmad
+        
         Ref: Section 4.2, p. 10 — Tiered Architecture & Routing
         """
         self._simulate_latency()
@@ -436,7 +436,7 @@ class MockLLM:
         Returns a cached response for repeated simple queries, modelling
         the Response Caching & Output Reuse strategy (p. 8).
 
-        Author: Imran Ahmad
+        
         Ref: Section 4.2, p. 8 — Response Caching & Output Reuse
         """
         cache_triggers = ["balance", "account balance", "what is my balance"]
@@ -454,7 +454,7 @@ class MockLLM:
         Mirrors the ``call_tool()`` function on pp. 14–15 which wraps
         external calls in a circuit-breaker pattern.
 
-        Author: Imran Ahmad
+        
         Ref: Section 4.3, pp. 14–15, Table 4.1
         """
         self._simulate_latency()
@@ -493,7 +493,7 @@ class MockLLM:
         Pipeline: Planner → Retriever → Memory Store → Execution Engine
         → Response Synthesizer. Each stage logs independently.
 
-        Author: Imran Ahmad
+        
         Ref: Section 4.4, Table 4.2, p. 13
         """
         self._simulate_latency()
@@ -561,7 +561,7 @@ class MockLLM:
         identity_spoofing, indirect_prompting, tool_hijacking, or None
         (clean).
 
-        Author: Imran Ahmad
+        
         Ref: Section 4.5, Tables 4.3a/b, pp. 18–19
         """
         self._simulate_latency()
@@ -613,7 +613,7 @@ class MockLLM:
         algorithmic fairness (model prediction bias) and the thresholds
         used to determine pass/fail status.
 
-        Author: Imran Ahmad
+        
         Ref: Section 4.6, p. 24 — Fairness and bias mitigation
         """
         self._simulate_latency()
@@ -671,7 +671,7 @@ class MockLLM:
         Routes to the appropriate RESPONSE_BANK entry based on
         *section_context* and prompt keywords.
 
-        Author: Imran Ahmad
+        
         Ref: All sections
         """
         self._simulate_latency()
@@ -705,7 +705,7 @@ class MockLLM:
     def get_usage_stats(self) -> Dict[str, Any]:
         """Return cumulative session statistics.
 
-        Author: Imran Ahmad
+        
         Ref: Section 4.2 — Monitoring & Iterative Optimization
         """
         return {
@@ -728,7 +728,7 @@ class SyntheticDataFactory:
     reproducible across runs. Field designs are traceable to specific
     chapter sections and pages.
 
-    Author: Imran Ahmad
+    
     Ref: Strategy §4.1, Sections 4.2, 4.3, 4.5, 4.6
     """
 
@@ -741,7 +741,7 @@ class SyntheticDataFactory:
         - Group B (40% of records): ~59% approval rate
         - Resulting demographic parity ratio ≈ 0.72 (below 0.80 threshold)
 
-        Author: Imran Ahmad
+        
         Ref: Section 4.6, p. 24 — Fairness and bias mitigation
         """
         rng = random.Random(seed)
@@ -781,7 +781,7 @@ class SyntheticDataFactory:
         Query complexity distribution mirrors the tier definitions on
         p. 10: simple FAQ, moderate conversation, complex analysis.
 
-        Author: Imran Ahmad
+        
         Ref: Section 4.2, pp. 7–10
         """
         rng = random.Random(seed)
@@ -840,7 +840,7 @@ class SyntheticDataFactory:
         prompt_injection, identity_spoofing, indirect_prompting,
         tool_hijacking.
 
-        Author: Imran Ahmad
+        
         Ref: Section 4.5, Tables 4.3a/b, pp. 18–19
         """
         rng = random.Random(seed)
@@ -905,7 +905,7 @@ class SyntheticDataFactory:
         Reliability values match the circuit-breaker scenario design
         in Strategy §4.3.
 
-        Author: Imran Ahmad
+        
         Ref: Section 4.3, Table 4.1, pp. 14–15
         """
         endpoints = [

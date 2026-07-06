@@ -1,7 +1,7 @@
 """
 MockLLM Simulation Engine for Chapter 3: The Art of Agent Prompting
 Book: Agents by Imran Ahmad (Packt Publishing, 2026)
-Author: Imran Ahmad
+
 
 Drop-in replacement for ChatOpenAI that enables all notebook demos
 to run without an API key. Subclasses BaseChatModel for full LangChain
@@ -26,8 +26,6 @@ class MockLLM(BaseChatModel):
 
     Subclasses BaseChatModel for full LangChain compatibility including
     the pipe operator (prompt | llm) used in Section 3.6.
-
-    Author: Imran Ahmad
     """
 
     model_name: str = Field(default="mock-chapter3")

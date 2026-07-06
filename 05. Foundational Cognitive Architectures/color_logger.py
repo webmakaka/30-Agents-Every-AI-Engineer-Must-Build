@@ -1,7 +1,7 @@
 """
 Chapter 05 — Foundational Cognitive Architectures
 Book: 30 Agents Every AI Engineer Must Build
-Author: Imran Ahmad
+
 Publisher: Packt Publishing
 
 Color-coded logging utilities for visual tracing of agent logic.
