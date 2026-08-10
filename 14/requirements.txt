@@ -22,7 +22,7 @@ numpy==1.26.4
 pydantic==2.8.2
 
 # --- Environment & Security ---
-python-dotenv==1.0.1
+python-dotenv==1.2.2
 
 # --- Notebook ---
 jupyter>=1.0.0
